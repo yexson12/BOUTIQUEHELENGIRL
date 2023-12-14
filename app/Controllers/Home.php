@@ -9,9 +9,14 @@ class Home extends BaseController
         return view('Login/login.php');
     }
 
-    public function admin(): string
+    public function admin()
     {
-        return view('admin/admin.php');
+
+        
+    echo view('admin/template/headeradmin.php');
+    echo view('admin/admin.php');
+    echo view('admin/template/footeradmin.php');    
+
     }
     
 }

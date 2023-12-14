@@ -7,4 +7,12 @@ class Admin extends BaseController
     {
         return view('admin/admin.php');
     }
+    public function admintratrabajador()
+    {
+
+
+    echo view('admin/template/headeradmin.php');
+      echo view('admin/admintrabajador.php');
+      echo view('admin/template/footeradmin.php');    
+    }
 }
