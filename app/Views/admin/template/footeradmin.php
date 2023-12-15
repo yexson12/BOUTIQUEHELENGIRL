@@ -1,211 +1,669 @@
-<footer class="footer pt-3  ">
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-6 mb-lg-0 mb-4">
-              <div class="copyright text-center text-sm text-muted text-lg-start">
-                © <script>
-                  document.write(new Date().getFullYear())
-                </script>,
-                made with <i class="fa fa-heart"></i> by
-                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
-                for a better web.
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </main>
-  <div class="fixed-plugin">
-    <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
-      <i class="fa fa-cog py-2"> </i>
-    </a>
-    <div class="card shadow-lg">
-      <div class="card-header pb-0 pt-3 ">
-        <div class="float-start">
-          <h5 class="mt-3 mb-0">Argon Configurator</h5>
-          <p>See our dashboard options.</p>
-        </div>
-        <div class="float-end mt-4">
-          <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
-            <i class="fa fa-close"></i>
-          </button>
-        </div>
-        <!-- End Toggle Button -->
-      </div>
-      <hr class="horizontal dark my-1">
-      <div class="card-body pt-sm-3 pt-0 overflow-auto">
-        <!-- Sidebar Backgrounds -->
-        <div>
-          <h6 class="mb-0">Sidebar Colors</h6>
-        </div>
-        <a href="javascript:void(0)" class="switch-trigger background-color">
-          <div class="badge-colors my-2 text-start">
-            <span class="badge filter bg-gradient-primary active" data-color="primary" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
-          </div>
-        </a>
-        <!-- Sidenav Type -->
-        <div class="mt-3">
-          <h6 class="mb-0">Sidenav Type</h6>
-          <p class="text-sm">Choose between 2 different sidenav types.</p>
-        </div>
-        <div class="d-flex">
-          <button class="btn bg-gradient-primary w-100 px-3 mb-2 active me-2" data-class="bg-white" onclick="sidebarType(this)">White</button>
-          <button class="btn bg-gradient-primary w-100 px-3 mb-2" data-class="bg-default" onclick="sidebarType(this)">Dark</button>
-        </div>
-        <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
-        <!-- Navbar Fixed -->
-        <div class="d-flex my-3">
-          <h6 class="mb-0">Navbar Fixed</h6>
-          <div class="form-check form-switch ps-0 ms-auto my-auto">
-            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
-          </div>
-        </div>
-        <hr class="horizontal dark my-sm-4">
-        <div class="mt-2 mb-5 d-flex">
-          <h6 class="mb-0">Light / Dark</h6>
-          <div class="form-check form-switch ps-0 ms-auto my-auto">
-            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
-          </div>
-        </div>
-        <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/argon-dashboard">Free Download</a>
-        <a class="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard">View documentation</a>
-        <div class="w-100 text-center">
-          <a class="github-button" href="https://github.com/creativetimofficial/argon-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/argon-dashboard on GitHub">Star</a>
-          <h6 class="mt-3">Thank you for sharing!</h6>
-          <a href="https://twitter.com/intent/tweet?text=Check%20Argon%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fargon-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
-            <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
-          </a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/argon-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
-            <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--   Core JS Files   -->
-  <script src="<?= base_url('/public/admin/assets/js/core/popper.min.js'); ?>"></script>
-  <script src="<?= base_url('/public/admin/assets/js/core/bootstrap.min.js'); ?>"></script>
-  <script src="<?= base_url('/public/admin/assets/js/plugins/perfect-scrollbar.min.js'); ?>"></script>
-  <script src="<?= base_url('/public/admin/assets/js/plugins/smooth-scrollbar.min.js'); ?>"></script>
-  <script src="<?= base_url('/public/admin/assets/js/plugins/chartjs.min.js'); ?>"></script>
-  <script>
-    var ctx1 = document.getElementById("chart-line").getContext("2d");
+<footer class="footer">
+				<div class="container-fluid">
+					<nav class="pull-left">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="http://www.themekita.com">
+									ThemeKita
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Help
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Licenses
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="copyright ml-auto">
+						2018, made with <i class="fa fa-heart heart text-danger"></i> by <a href="http://www.themekita.com">ThemeKita</a>
+					</div>				
+				</div>
+			</footer>
+		</div>
+		
+		<div class="quick-sidebar">
+			<a href="#" class="close-quick-sidebar">
+				<i class="flaticon-cross"></i>
+			</a>
+			<div class="quick-sidebar-wrapper">
+				<ul class="nav nav-tabs nav-line nav-color-secondary" role="tablist">
+					<li class="nav-item"> <a class="nav-link active show" data-toggle="tab" href="#messages" role="tab" aria-selected="true">Messages</a> </li>
+					<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#tasks" role="tab" aria-selected="false">Tasks</a> </li>
+					<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-selected="false">Settings</a> </li>
+				</ul>
+				<div class="tab-content mt-3">
+					<div class="tab-chat tab-pane fade show active" id="messages" role="tabpanel">
+						<div class="messages-contact">
+							<div class="quick-wrapper">
+								<div class="quick-scroll scrollbar-outer">
+									<div class="quick-content contact-content">
+										<span class="category-title mt-0">Contacts</span>
+										<div class="avatar-group">
+											<div class="avatar">
+												<img src="../assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+											</div>
+											<div class="avatar">
+												<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+											</div>
+											<div class="avatar">
+												<img src="../assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+											</div>
+											<div class="avatar">
+												<img src="../assets/img/talha.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+											</div>
+											<div class="avatar">
+												<span class="avatar-title rounded-circle border border-white">+</span>
+											</div>
+										</div>
+										<span class="category-title">Recent</span>
+										<div class="contact-list contact-list-recent">
+											<div class="user">
+												<a href="#">
+													<div class="avatar avatar-online">
+														<img src="../assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+													</div>
+													<div class="user-data">
+														<span class="name">Jimmy Denis</span>
+														<span class="message">How are you ?</span>
+													</div>
+												</a>
+											</div>
+											<div class="user">
+												<a href="#">
+													<div class="avatar avatar-offline">
+														<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+													</div>
+													<div class="user-data">
+														<span class="name">Chad</span>
+														<span class="message">Ok, Thanks !</span>
+													</div>
+												</a>
+											</div>
+											<div class="user">
+												<a href="#">
+													<div class="avatar avatar-offline">
+														<img src="../assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+													</div>
+													<div class="user-data">
+														<span class="name">John Doe</span>
+														<span class="message">Ready for the meeting today with...</span>
+													</div>
+												</a>
+											</div>
+										</div>
+										<span class="category-title">Other Contacts</span>
+										<div class="contact-list">
+											<div class="user">
+												<a href="#">
+													<div class="avatar avatar-online">
+														<img src="../assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+													</div>
+													<div class="user-data2">
+														<span class="name">Jimmy Denis</span>
+														<span class="status">Online</span>
+													</div>
+												</a>
+											</div>
+											<div class="user">
+												<a href="#">
+													<div class="avatar avatar-offline">
+														<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+													</div>
+													<div class="user-data2">
+														<span class="name">Chad</span>
+														<span class="status">Active 2h ago</span>
+													</div>
+												</a>
+											</div>
+											<div class="user">
+												<a href="#">
+													<div class="avatar avatar-away">
+														<img src="../assets/img/talha.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+													</div>
+													<div class="user-data2">
+														<span class="name">Talha</span>
+														<span class="status">Away</span>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="messages-wrapper">
+							<div class="messages-title">
+								<div class="user">
+									<div class="avatar avatar-offline float-right ml-2">
+										<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+									</div>
+									<span class="name">Chad</span>
+									<span class="last-active">Active 2h ago</span>
+								</div>
+								<button class="return">
+									<i class="flaticon-left-arrow-3"></i>
+								</button>
+							</div>
+							<div class="messages-body messages-scroll scrollbar-outer">
+								<div class="message-content-wrapper">
+									<div class="message message-in">
+										<div class="avatar avatar-sm">
+											<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+										</div>
+										<div class="message-body">
+											<div class="message-content">
+												<div class="name">Chad</div>
+												<div class="content">Hello, Rian</div>
+											</div>
+											<div class="date">12.31</div>
+										</div>
+									</div>
+								</div>
+								<div class="message-content-wrapper">
+									<div class="message message-out">
+										<div class="message-body">
+											<div class="message-content">
+												<div class="content">
+													Hello, Chad
+												</div>
+											</div>
+											<div class="message-content">
+												<div class="content">
+													What's up?
+												</div>
+											</div>
+											<div class="date">12.35</div>
+										</div>
+									</div>
+								</div>
+								<div class="message-content-wrapper">
+									<div class="message message-in">
+										<div class="avatar avatar-sm">
+											<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+										</div>
+										<div class="message-body">
+											<div class="message-content">
+												<div class="name">Chad</div>
+												<div class="content">
+													Thanks
+												</div>
+											</div>
+											<div class="message-content">
+												<div class="content">
+													When is the deadline of the project we are working on ?
+												</div>
+											</div>
+											<div class="date">13.00</div>
+										</div>
+									</div>
+								</div>
+								<div class="message-content-wrapper">
+									<div class="message message-out">
+										<div class="message-body">
+											<div class="message-content">
+												<div class="content">
+													The deadline is about 2 months away
+												</div>
+											</div>
+											<div class="date">13.10</div>
+										</div>
+									</div>
+								</div>
+								<div class="message-content-wrapper">
+									<div class="message message-in">
+										<div class="avatar avatar-sm">
+											<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+										</div>
+										<div class="message-body">
+											<div class="message-content">
+												<div class="name">Chad</div>
+												<div class="content">
+													Ok, Thanks !
+												</div>
+											</div>
+											<div class="date">13.15</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="messages-form">
+								<div class="messages-form-control">
+									<input type="text" placeholder="Type here" class="form-control input-pill input-solid message-input">
+								</div>
+								<div class="messages-form-tool">
+									<a href="#" class="attachment">
+										<i class="flaticon-file"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="tasks" role="tabpanel">
+						<div class="quick-wrapper tasks-wrapper">
+							<div class="tasks-scroll scrollbar-outer">
+								<div class="tasks-content">
+									<span class="category-title mt-0">Today</span>
+									<ul class="tasks-list">
+										<li>
+											<label class="custom-checkbox custom-control checkbox-secondary">
+												<input type="checkbox" checked="" class="custom-control-input"><span class="custom-control-label">Planning new project structure</span>
+												<span class="task-action">
+													<a href="#" class="link text-danger">
+														<i class="flaticon-interface-5"></i>
+													</a>
+												</span>
+											</label>
+										</li>
+										<li>
+											<label class="custom-checkbox custom-control checkbox-secondary">
+												<input type="checkbox" class="custom-control-input"><span class="custom-control-label">Create the main structure							</span>
+												<span class="task-action">
+													<a href="#" class="link text-danger">
+														<i class="flaticon-interface-5"></i>
+													</a>
+												</span>
+											</label>
+										</li>
+										<li>
+											<label class="custom-checkbox custom-control checkbox-secondary">
+												<input type="checkbox" class="custom-control-input"><span class="custom-control-label">Add new Post</span>
+												<span class="task-action">
+													<a href="#" class="link text-danger">
+														<i class="flaticon-interface-5"></i>
+													</a>
+												</span>
+											</label>
+										</li>
+										<li>
+											<label class="custom-checkbox custom-control checkbox-secondary">
+												<input type="checkbox" class="custom-control-input"><span class="custom-control-label">Finalise the design proposal</span>
+												<span class="task-action">
+													<a href="#" class="link text-danger">
+														<i class="flaticon-interface-5"></i>
+													</a>
+												</span>
+											</label>
+										</li>
+									</ul>
 
-    var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
+									<span class="category-title">Tomorrow</span>
+									<ul class="tasks-list">
+										<li>
+											<label class="custom-checkbox custom-control checkbox-secondary">
+												<input type="checkbox" class="custom-control-input"><span class="custom-control-label">Initialize the project							</span>
+												<span class="task-action">
+													<a href="#" class="link text-danger">
+														<i class="flaticon-interface-5"></i>
+													</a>
+												</span>
+											</label>
+										</li>
+										<li>
+											<label class="custom-checkbox custom-control checkbox-secondary">
+												<input type="checkbox" class="custom-control-input"><span class="custom-control-label">Create the main structure							</span>
+												<span class="task-action">
+													<a href="#" class="link text-danger">
+														<i class="flaticon-interface-5"></i>
+													</a>
+												</span>
+											</label>
+										</li>
+										<li>
+											<label class="custom-checkbox custom-control checkbox-secondary">
+												<input type="checkbox" class="custom-control-input"><span class="custom-control-label">Updates changes to GitHub							</span>
+												<span class="task-action">
+													<a href="#" class="link text-danger">
+														<i class="flaticon-interface-5"></i>
+													</a>
+												</span>
+											</label>
+										</li>
+										<li>
+											<label class="custom-checkbox custom-control checkbox-secondary">
+												<input type="checkbox" class="custom-control-input"><span title="This task is too long to be displayed in a normal space!" class="custom-control-label">This task is too long to be displayed in a normal space!				</span>
+												<span class="task-action">
+													<a href="#" class="link text-danger">
+														<i class="flaticon-interface-5"></i>
+													</a>
+												</span>
+											</label>
+										</li>
+									</ul>
 
-    gradientStroke1.addColorStop(1, 'rgba(94, 114, 228, 0.2)');
-    gradientStroke1.addColorStop(0.2, 'rgba(94, 114, 228, 0.0)');
-    gradientStroke1.addColorStop(0, 'rgba(94, 114, 228, 0)');
-    new Chart(ctx1, {
-      type: "line",
-      data: {
-        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        datasets: [{
-          label: "Mobile apps",
-          tension: 0.4,
-          borderWidth: 0,
-          pointRadius: 0,
-          borderColor: "#5e72e4",
-          backgroundColor: gradientStroke1,
-          borderWidth: 3,
-          fill: true,
-          data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
-          maxBarThickness: 6
+									<div class="mt-3">
+										<div class="btn btn-primary btn-rounded btn-sm">
+											<span class="btn-label">
+												<i class="fa fa-plus"></i>
+											</span>
+											Add Task
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="settings" role="tabpanel">
+						<div class="quick-wrapper settings-wrapper">
+							<div class="quick-scroll scrollbar-outer">
+								<div class="quick-content settings-content">
 
-        }],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false,
-          }
-        },
-        interaction: {
-          intersect: false,
-          mode: 'index',
-        },
-        scales: {
-          y: {
-            grid: {
-              drawBorder: false,
-              display: true,
-              drawOnChartArea: true,
-              drawTicks: false,
-              borderDash: [5, 5]
-            },
-            ticks: {
-              display: true,
-              padding: 10,
-              color: '#fbfbfb',
-              font: {
-                size: 11,
-                family: "Open Sans",
-                style: 'normal',
-                lineHeight: 2
-              },
-            }
-          },
-          x: {
-            grid: {
-              drawBorder: false,
-              display: false,
-              drawOnChartArea: false,
-              drawTicks: false,
-              borderDash: [5, 5]
-            },
-            ticks: {
-              display: true,
-              color: '#ccc',
-              padding: 20,
-              font: {
-                size: 11,
-                family: "Open Sans",
-                style: 'normal',
-                lineHeight: 2
-              },
-            }
-          },
-        },
-      },
-    });
-  </script>
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
-      }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-    }
-  </script>
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="<?= base_url('/public/admin/assets/js/argon-dashboard.min.js'); ?>"></script>
+									<span class="category-title mt-0">General Settings</span>
+									<ul class="settings-list">
+										<li>
+											<span class="item-label">Enable Notifications</span>
+											<div class="item-control">
+												<input type="checkbox" checked data-toggle="toggle" data-onstyle="primary" data-style="btn-round" data-size>
+											</div>
+										</li>
+										<li>
+											<span class="item-label">Signin with social media</span>
+											<div class="item-control">
+												<input type="checkbox" data-toggle="toggle" data-onstyle="primary" data-style="btn-round">
+											</div>
+										</li>
+										<li>
+											<span class="item-label">Backup storage</span>
+											<div class="item-control">
+												<input type="checkbox" data-toggle="toggle" data-onstyle="primary" data-style="btn-round">
+											</div>
+										</li>
+										<li>
+											<span class="item-label">SMS Alert</span>
+											<div class="item-control">
+												<input type="checkbox" checked data-toggle="toggle" data-onstyle="primary" data-style="btn-round">
+											</div>
+										</li>
+									</ul>
+
+									<span class="category-title mt-0">Notifications</span>
+									<ul class="settings-list">
+										<li>
+											<span class="item-label">Email Notifications</span>
+											<div class="item-control">
+												<input type="checkbox" checked data-toggle="toggle" data-onstyle="primary" data-style="btn-round">
+											</div>
+										</li>
+										<li>
+											<span class="item-label">New Comments</span>
+											<div class="item-control">
+												<input type="checkbox" checked data-toggle="toggle" data-onstyle="primary" data-style="btn-round">
+											</div>
+										</li>
+										<li>
+											<span class="item-label">Chat Messages</span>
+											<div class="item-control">
+												<input type="checkbox" checked data-toggle="toggle" data-onstyle="primary" data-style="btn-round">
+											</div>
+										</li>
+										<li>
+											<span class="item-label">Project Updates</span>
+											<div class="item-control">
+												<input type="checkbox" data-toggle="toggle" data-onstyle="primary" data-style="btn-round">
+											</div>
+										</li>
+										<li>
+											<span class="item-label">New Tasks</span>
+											<div class="item-control">
+												<input type="checkbox" checked data-toggle="toggle" data-onstyle="primary" data-style="btn-round">
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Custom template | don't include it in your project! -->
+		<div class="custom-template">
+			<div class="title">Settings</div>
+			<div class="custom-content">
+				<div class="switcher">
+					<div class="switch-block">
+						<h4>Logo Header</h4>
+						<div class="btnSwitch">
+							<button type="button" class="changeLogoHeaderColor" data-color="dark"></button>
+							<button type="button" class="selected changeLogoHeaderColor" data-color="blue"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="purple"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="light-blue"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="green"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="orange"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="red"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="white"></button>
+							<br/>
+							<button type="button" class="changeLogoHeaderColor" data-color="dark2"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="blue2"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="purple2"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="light-blue2"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="green2"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="orange2"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="red2"></button>
+						</div>
+					</div>
+					<div class="switch-block">
+						<h4>Navbar Header</h4>
+						<div class="btnSwitch">
+							<button type="button" class="changeTopBarColor" data-color="dark"></button>
+							<button type="button" class="changeTopBarColor" data-color="blue"></button>
+							<button type="button" class="changeTopBarColor" data-color="purple"></button>
+							<button type="button" class="changeTopBarColor" data-color="light-blue"></button>
+							<button type="button" class="changeTopBarColor" data-color="green"></button>
+							<button type="button" class="changeTopBarColor" data-color="orange"></button>
+							<button type="button" class="changeTopBarColor" data-color="red"></button>
+							<button type="button" class="changeTopBarColor" data-color="white"></button>
+							<br/>
+							<button type="button" class="changeTopBarColor" data-color="dark2"></button>
+							<button type="button" class="selected changeTopBarColor" data-color="blue2"></button>
+							<button type="button" class="changeTopBarColor" data-color="purple2"></button>
+							<button type="button" class="changeTopBarColor" data-color="light-blue2"></button>
+							<button type="button" class="changeTopBarColor" data-color="green2"></button>
+							<button type="button" class="changeTopBarColor" data-color="orange2"></button>
+							<button type="button" class="changeTopBarColor" data-color="red2"></button>
+						</div>
+					</div>
+					<div class="switch-block">
+						<h4>Sidebar</h4>
+						<div class="btnSwitch">
+							<button type="button" class="selected changeSideBarColor" data-color="white"></button>
+							<button type="button" class="changeSideBarColor" data-color="dark"></button>
+							<button type="button" class="changeSideBarColor" data-color="dark2"></button>
+						</div>
+					</div>
+					<div class="switch-block">
+						<h4>Background</h4>
+						<div class="btnSwitch">
+							<button type="button" class="changeBackgroundColor" data-color="bg2"></button>
+							<button type="button" class="changeBackgroundColor selected" data-color="bg1"></button>
+							<button type="button" class="changeBackgroundColor" data-color="bg3"></button>
+							<button type="button" class="changeBackgroundColor" data-color="dark"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="custom-toggle">
+				<i class="flaticon-settings"></i>
+			</div>
+		</div>
+		<!-- End Custom template -->
+	</div>
+	<!--   Core JS Files   -->
+	<script src="<?= base_url('/public/admin/ssets/js/core/jquery.3.2.1.min.js'); ?>"></script>
+	<script src="<?= base_url('/public/admin/assets/js/core/popper.min.js'); ?>"></script>
+	<script src="<?= base_url('/public/admin/assets/js/core/bootstrap.min.js'); ?>"></script>
+
+	<!-- jQuery UI -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js'); ?>"></script>
+	<script src="<?= base_url('/public/admin/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js'); ?>"></script>
+
+	<!-- jQuery Scrollbar -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js'); ?>"></script>
+
+	<!-- Moment JS -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/moment/moment.min.js'); ?>"></script>
+
+	<!-- Chart JS -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/chart.js/chart.min.js'); ?>"></script>
+
+	<!-- jQuery Sparkline -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js'); ?>"></script>
+
+	<!-- Chart Circle -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/chart-circle/circles.min.js'); ?>"></script>
+
+	<!-- Datatables -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/datatables/datatables.min.js'); ?>"></script>
+
+	<!-- Bootstrap Notify -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js'); ?>"></script>
+
+	<!-- Bootstrap Toggle -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js'); ?>"></script>
+
+	<!-- jQuery Vector Maps -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/jqvmap/jquery.vmap.min.js'); ?>"></script>
+	<script src="<?= base_url('/public/admin/assets/js/plugin/jqvmap/maps/jquery.vmap.world.js'); ?>"></script>
+
+	<!-- Google Maps Plugin -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/gmaps/gmaps.js'); ?>"></script>
+
+	<!-- Dropzone -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/dropzone/dropzone.min.js'); ?>"></script>
+
+	<!-- Fullcalendar -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/fullcalendar/fullcalendar.min.js'); ?>"></script>
+
+	<!-- DateTimePicker -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js'); ?>"></script>
+
+	<!-- Bootstrap Tagsinput -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/bootstrap-tagsinput/bootstrap-tagsinput.min.js'); ?>"></script>
+
+	<!-- Bootstrap Wizard -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/bootstrap-wizard/bootstrapwizard.js'); ?>"></script>
+
+	<!-- jQuery Validation -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/jquery.validate/jquery.validate.min.js'); ?>"></script>
+
+	<!-- Summernote -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/summernote/summernote-bs4.min.js'); ?>"></script>
+
+	<!-- Select2 -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/select2/select2.full.min.js'); ?>"></script>
+
+	<!-- Sweet Alert -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/sweetalert/sweetalert.min.js'); ?>"></script>
+
+	<!-- Owl Carousel -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/owl-carousel/owl.carousel.min.js'); ?>"></script>
+
+	<!-- Magnific Popup -->
+	<script src="<?= base_url('/public/admin/assets/js/plugin/jquery.magnific-popup/jquery.magnific-popup.min.js'); ?>"></script>
+
+	<!-- Atlantis JS -->
+	<script src="<?= base_url('/public/admin/assets/js/atlantis.min.js'); ?>"></script>
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="<?= base_url('/public/admin/assets/js/setting-demo.js'); ?>"></script>
+	<script src="<?= base_url('/public/admin/assets/js/demo.js'); ?>"></script>
+	<script>
+		Circles.create({
+			id:'circles-1',
+			radius:45,
+			value:60,
+			maxValue:100,
+			width:7,
+			text: 5,
+			colors:['#f1f1f1', '#FF9E27'],
+			duration:400,
+			wrpClass:'circles-wrp',
+			textClass:'circles-text',
+			styleWrapper:true,
+			styleText:true
+		})
+
+		Circles.create({
+			id:'circles-2',
+			radius:45,
+			value:70,
+			maxValue:100,
+			width:7,
+			text: 36,
+			colors:['#f1f1f1', '#2BB930'],
+			duration:400,
+			wrpClass:'circles-wrp',
+			textClass:'circles-text',
+			styleWrapper:true,
+			styleText:true
+		})
+
+		Circles.create({
+			id:'circles-3',
+			radius:45,
+			value:40,
+			maxValue:100,
+			width:7,
+			text: 12,
+			colors:['#f1f1f1', '#F25961'],
+			duration:400,
+			wrpClass:'circles-wrp',
+			textClass:'circles-text',
+			styleWrapper:true,
+			styleText:true
+		})
+
+		var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
+
+		var mytotalIncomeChart = new Chart(totalIncomeChart, {
+			type: 'bar',
+			data: {
+				labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
+				datasets : [{
+					label: "Total Income",
+					backgroundColor: '#ff9e27',
+					borderColor: 'rgb(23, 125, 255)',
+					data: [6, 4, 9, 5, 4, 6, 4, 3, 8, 10],
+				}],
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				legend: {
+					display: false,
+				},
+				scales: {
+					yAxes: [{
+						ticks: {
+							display: false //this will remove only the label
+						},
+						gridLines : {
+							drawBorder: false,
+							display : false
+						}
+					}],
+					xAxes : [ {
+						gridLines : {
+							drawBorder: false,
+							display : false
+						}
+					}]
+				},
+			}
+		});
+
+		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: '#ffa534',
+			fillColor: 'rgba(255, 165, 52, .14)'
+		});
+	</script>
 </body>
-
 </html>

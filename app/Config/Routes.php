@@ -7,4 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('admin/', 'Home::admin');
+
+// EMPLEADO LISTA
 $routes->get('admintrabajador/', 'Admin::admintratrabajador');
+$routes->get('listarempleado/', 'Empleado::listarempleado');
