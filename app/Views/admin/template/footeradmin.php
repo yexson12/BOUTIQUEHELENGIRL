@@ -45,16 +45,16 @@
 										<span class="category-title mt-0">Contacts</span>
 										<div class="avatar-group">
 											<div class="avatar">
-												<img src="../assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+												<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 											</div>
 											<div class="avatar">
-												<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+												<img src="<?= base_url('/public/admin/assets/img/chadengle.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 											</div>
 											<div class="avatar">
-												<img src="../assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+												<img src="<?= base_url('/public/admin/assets/img/mlane.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 											</div>
 											<div class="avatar">
-												<img src="../assets/img/talha.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+												<img src="<?= base_url('/public/admin/assets/img/talha.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 											</div>
 											<div class="avatar">
 												<span class="avatar-title rounded-circle border border-white">+</span>
@@ -65,7 +65,7 @@
 											<div class="user">
 												<a href="#">
 													<div class="avatar avatar-online">
-														<img src="../assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+														<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 													</div>
 													<div class="user-data">
 														<span class="name">Jimmy Denis</span>
@@ -76,7 +76,7 @@
 											<div class="user">
 												<a href="#">
 													<div class="avatar avatar-offline">
-														<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+														<img src="<?= base_url('/public/admin/assets/img/chadengle.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 													</div>
 													<div class="user-data">
 														<span class="name">Chad</span>
@@ -87,7 +87,7 @@
 											<div class="user">
 												<a href="#">
 													<div class="avatar avatar-offline">
-														<img src="../assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+														<img src="<?= base_url('/public/admin/assets/img/mlane.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 													</div>
 													<div class="user-data">
 														<span class="name">John Doe</span>
@@ -101,7 +101,7 @@
 											<div class="user">
 												<a href="#">
 													<div class="avatar avatar-online">
-														<img src="../assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+														<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 													</div>
 													<div class="user-data2">
 														<span class="name">Jimmy Denis</span>
@@ -112,7 +112,7 @@
 											<div class="user">
 												<a href="#">
 													<div class="avatar avatar-offline">
-														<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+														<img src="<?= base_url('/public/admin/assets/img/chadengle.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 													</div>
 													<div class="user-data2">
 														<span class="name">Chad</span>
@@ -123,7 +123,7 @@
 											<div class="user">
 												<a href="#">
 													<div class="avatar avatar-away">
-														<img src="../assets/img/talha.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+														<img src="<?= base_url('/public/admin/assets/img/talha.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 													</div>
 													<div class="user-data2">
 														<span class="name">Talha</span>
@@ -140,7 +140,7 @@
 							<div class="messages-title">
 								<div class="user">
 									<div class="avatar avatar-offline float-right ml-2">
-										<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+										<img src="<?= base_url('/public/admin/assets/img/chadengle.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 									</div>
 									<span class="name">Chad</span>
 									<span class="last-active">Active 2h ago</span>
@@ -153,7 +153,7 @@
 								<div class="message-content-wrapper">
 									<div class="message message-in">
 										<div class="avatar avatar-sm">
-											<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+											<img src="<?= base_url('/public/admin/assets/img/chadengle.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 										</div>
 										<div class="message-body">
 											<div class="message-content">
@@ -184,7 +184,7 @@
 								<div class="message-content-wrapper">
 									<div class="message message-in">
 										<div class="avatar avatar-sm">
-											<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+											<img src="<?= base_url('/public/admin/assets/img/chadengle.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 										</div>
 										<div class="message-body">
 											<div class="message-content">
@@ -217,7 +217,7 @@
 								<div class="message-content-wrapper">
 									<div class="message message-in">
 										<div class="avatar avatar-sm">
-											<img src="../assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+											<img src="<?= base_url('/public/admin/assets/img/chadengle.jpg'); ?>" alt="..." class="avatar-img rounded-circle border border-white">
 										</div>
 										<div class="message-body">
 											<div class="message-content">
@@ -493,7 +493,7 @@
 		<!-- End Custom template -->
 	</div>
 	<!--   Core JS Files   -->
-	<script src="<?= base_url('/public/admin/ssets/js/core/jquery.3.2.1.min.js'); ?>"></script>
+	<script src="<?= base_url('/public/admin/assets/js/core/jquery.3.2.1.min.js'); ?>"></script>
 	<script src="<?= base_url('/public/admin/assets/js/core/popper.min.js'); ?>"></script>
 	<script src="<?= base_url('/public/admin/assets/js/core/bootstrap.min.js'); ?>"></script>
 
