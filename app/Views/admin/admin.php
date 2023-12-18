@@ -479,27 +479,44 @@
 									<table id="add-row" class="display table table-striped table-hover">
 										<thead>
 											<tr>
-												<th>Name</th>
-												<th>Position</th>
-												<th>Office</th>
-												<th style="width: 10%">Action</th>
+
+												<th style="background-color: #02fcef; color: black;width: 30%;">Name</th>
+												<th style="background-color: #02fcef; color: black;">Position</th>
+												<th style="background-color: #02fcef; color: black;">Office</th>
+												<th style="background-color: #02fcef; color: black; width: 10%;">Action</th>
+
 											</tr>
 										</thead>
 										<tfoot>
 											<tr>
-												<th>Name</th>
-												<th>Position</th>
-												<th>Office</th>
-												<th>Action</th>
+
+												<th style="background-color: #02fcef; color: black;">Name</th>
+												<th style="background-color: #02fcef; color: black;">Position</th>
+												<th style="background-color: #02fcef; color: black;">Office</th>
+												<th style="background-color: #02fcef; color: black;">Action</th>
 											</tr>
 										</tfoot>
 										<tbody>
 											<tr>
-												<td>Tiger Nixon</td>
+
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
+
 												<td>System Architect</td>
 												<td>Edinburgh</td>
 												<td>
 													<div class="form-button-action">
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Ver Detalle">
+															<i class="fa fa-edit"></i>
+														</button>
 														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
 															<i class="fa fa-edit"></i>
 														</button>
@@ -510,7 +527,17 @@
 												</td>
 											</tr>
 											<tr>
-												<td>Garrett Winters</td>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
+
 												<td>Accountant</td>
 												<td>Tokyo</td>
 												<td>
@@ -525,7 +552,17 @@
 												</td>
 											</tr>
 											<tr>
-												<td>Ashton Cox</td>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
+
 												<td>Junior Technical Author</td>
 												<td>San Francisco</td>
 												<td>
@@ -540,7 +577,17 @@
 												</td>
 											</tr>
 											<tr>
-												<td>Cedric Kelly</td>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
+
 												<td>Senior Javascript Developer</td>
 												<td>Edinburgh</td>
 												<td>
@@ -555,7 +602,17 @@
 												</td>
 											</tr>
 											<tr>
-												<td>Airi Satou</td>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
+
 												<td>Accountant</td>
 												<td>Tokyo</td>
 												<td>
@@ -570,7 +627,17 @@
 												</td>
 											</tr>
 											<tr>
-												<td>Brielle Williamson</td>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
+
 												<td>Integration Specialist</td>
 												<td>New York</td>
 												<td>
@@ -585,7 +652,17 @@
 												</td>
 											</tr>
 											<tr>
-												<td>Herrod Chandler</td>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
+
 												<td>Sales Assistant</td>
 												<td>San Francisco</td>
 												<td>
@@ -600,7 +677,17 @@
 												</td>
 											</tr>
 											<tr>
-												<td>Rhona Davidson</td>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
+
 												<td>Integration Specialist</td>
 												<td>Tokyo</td>
 												<td>
@@ -615,7 +702,17 @@
 												</td>
 											</tr>
 											<tr>
-												<td>Colleen Hurst</td>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
+
 												<td>Javascript Developer</td>
 												<td>San Francisco</td>
 												<td>
@@ -630,7 +727,17 @@
 												</td>
 											</tr>
 											<tr>
-												<td>Sonya Frost</td>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
+
 												<td>Software Engineer</td>
 												<td>Edinburgh</td>
 												<td>
@@ -781,4 +888,3 @@
 				</div>
 			</div>
 		</div>
-		
