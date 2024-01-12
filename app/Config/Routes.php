@@ -15,7 +15,6 @@ $routes->get('listarreporte/', 'Report::listarreporte');
 
 //CREACION DEL API OPTENER DATOS 
 $routes->resource('marcacionapi1');
-
+$routes->resource('marcacionapi',['controller'=> 'MarcacionController']);
 //fIN
 
-$routes->resource('marcacionapi',['controller'=> 'MarcacionController']);
