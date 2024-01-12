@@ -590,6 +590,20 @@
 		styleWrapper: true,
 		styleText: true
 	})
+	Circles.create({
+		id: 'circles-4',
+		radius: 45,
+		value: 60,
+		maxValue: 100,
+		width: 7,
+		text: 9,
+		colors: ['#f1f1f1', '#2BB930'],
+		duration: 400,
+		wrpClass: 'circles-wrp',
+		textClass: 'circles-text',
+		styleWrapper: true,
+		styleText: true
+	})
 
 	Circles.create({
 		id: 'circles-2',

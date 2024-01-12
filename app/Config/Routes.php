@@ -18,3 +18,4 @@ $routes->resource('marcacionapi1');
 $routes->resource('marcacionapi',['controller'=> 'MarcacionController']);
 //fIN
 
+$routes->get('listaempleadonuevo', 'Jornada\Jornadacontroller::listarempleado');

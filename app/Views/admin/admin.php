@@ -44,6 +44,7 @@
 										<div id="circles-1"></div>
 										<h6 class="fw-bold mt-3 mb-0">Normal</h6>
 									</div>
+								
 									<div class="px-2 pb-2 pb-md-0 text-center">
 										<div id="circles-2"></div>
 										<h6 class="fw-bold mt-3 mb-0">Tardanzas</h6>
