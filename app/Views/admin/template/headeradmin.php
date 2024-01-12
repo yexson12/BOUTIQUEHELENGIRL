@@ -20,7 +20,7 @@
 		}
 	});
 </script>
-
+<script src="<?= base_url('/public/admin/assets/js/plugin/chart.js/chart.min.js'); ?>"></script>
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="<?= base_url('/public/admin/assets/css/bootstrap.min.css'); ?>">
 	<link rel="stylesheet" href="<?= base_url('/public/admin/assets/css/atlantis.css'); ?>">
@@ -361,8 +361,8 @@
 										</a>
 									</li>
 									<li>
-										<a href="../demo2/index.html">
-											<span class="sub-item">Dashboard 2</span>
+										<a href="<?= base_url('listarreporte'); ?>">
+											<span class="sub-item">Reporte 2</span>
 										</a>
 									</li>
 									<li>

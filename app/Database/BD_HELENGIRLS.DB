@@ -1,0 +1,192 @@
+
+create   Database BD_HELENGIRLS;
+use BD_HELENGIRLS;
+
+-- SEGUNDA TABLA
+
+DROP TABLE IF EXISTS empleado;
+CREATE TABLE empleado (
+  idempleado INT PRIMARY KEY AUTO_INCREMENT,
+  dniusuario INT ,
+  nombres varchar(50),
+  apellidos varchar(50) ,
+  telefono int ,
+  direccion varchar(50) ,
+  correo varchar(50) ,
+  estadocivil varchar(20),
+  fechanacimiento datetime,
+  sexo varchar(20),
+  estado INT  
+);
+
+
+DROP TABLE IF EXISTS horario;
+CREATE TABLE horario (
+  idhorario INT PRIMARY KEY AUTO_INCREMENT,
+  hora_inicio time,
+  hora_fin time ,
+  estado INT 
+);
+
+DROP TABLE IF EXISTS horarioEmpleado;
+CREATE TABLE horarioEmpleado (
+  idhorarioEmpleado INT PRIMARY KEY AUTO_INCREMENT,  
+  idempleado int,
+  idhorario int,
+  fechalaborada  date,  
+  horaentrada  time, 
+  horasalidaalmuerzo time, 
+  horaentradaalmuerzo time, 
+  horasalida time,
+  estado INT ,
+CONSTRAINT horarioEmpleado_fkempleado FOREIGN KEY (idempleado) REFERENCES empleado (idempleado),
+CONSTRAINT horarioEmpleado_fkhorario FOREIGN KEY (idhorario) REFERENCES horario (idhorario)
+);
+
+DROP TABLE IF EXISTS resumenHoraAmanecida;
+CREATE TABLE resumenHoraAmanecida (
+  idresumenHoraAmanecida INT PRIMARY KEY AUTO_INCREMENT,  
+  idempleado int,
+  fechalaborada  date,  
+  horaentrada  time, 
+  horasalida time,
+  estado INT ,
+CONSTRAINT horarioEmpleado_fkresumenHoraAmanecida FOREIGN KEY (idempleado) REFERENCES empleado(idempleado)
+);
+
+
+-- Crear la tabla 'estadoCumplimientoJornada'
+DROP TABLE IF EXISTS estadoCumplimientoJornada;
+CREATE TABLE estadoCumplimientoJornada (
+  idestadoCumplimientoJornada INT PRIMARY KEY AUTO_INCREMENT,
+  nombrejornada varchar(50),
+  estado bit
+);
+
+-- Insertar datos para los estados
+
+DROP TABLE IF EXISTS resumenEmpleadoHoras;
+CREATE  TABLE resumenEmpleadoHoras (
+  idresumenempleadohoras INT PRIMARY KEY AUTO_INCREMENT,  
+  idempleado int,
+  idhorarioEmpleado int,
+  fechatrabajo date,
+  horastrabajadas time,
+  horasextras time,
+  faltantes time,
+  Horastotal  time, 
+  idestadoCumplimientoJornada int,
+  descripcionpermiso  varchar(100), 
+CONSTRAINT resumenEmpleadoHoras_fkempleado FOREIGN KEY (idempleado) REFERENCES empleado (idempleado),
+CONSTRAINT resumenEmpleadoHoras_fkestadoCumplimientoJornada FOREIGN KEY (idestadoCumplimientoJornada) REFERENCES estadoCumplimientoJornada (idestadoCumplimientoJornada),
+CONSTRAINT resumenEmpleadoHoras_fkhorarioEmpleado FOREIGN KEY (idhorarioEmpleado) REFERENCES horarioEmpleado (idhorarioEmpleado)
+);
+
+DROP TABLE IF EXISTS usuarios;
+CREATE TABLE usuarios (
+  idusuario int PRIMARY KEY  AUTO_INCREMENT,
+  idempleado int,
+  correo varchar(100)  ,
+  contrasena varchar(100) ,
+  estado INT  , 
+  CONSTRAINT usuarios_fkempleado FOREIGN KEY (idempleado) REFERENCES empleado(idempleado)
+);
+
+
+DROP TABLE IF EXISTS rolusuario;
+CREATE TABLE rolusuario (
+  idrol INT PRIMARY KEY AUTO_INCREMENT,
+idempleado INT,
+  nombrerol varchar(50)  ,
+  estado INT  ,
+  CONSTRAINT rolusuario_fkempleado FOREIGN KEY (idempleado) REFERENCES empleado (idempleado)
+);
+
+DROP TABLE IF EXISTS Marcacion;
+CREATE TABLE Marcacion (
+  idMarcacion INT PRIMARY KEY AUTO_INCREMENT,
+  datosextraidos varchar(255)  ,
+  fechaUltimactualizacion datetime DEFAULT CURRENT_TIMESTAMP,
+  estado INT
+);
+
+-- ------------------------------------LLENAR DATOS------------------------------
+INSERT INTO Marcacion (datosextraidos,fechaUltimactualizacion,estado)
+VALUES
+  ('74384438|ddddddd', '2023-12-13 00:00:00',1),
+  ('74384438|ddddddd', '2023-12-15 00:00:00',1),
+  ('74384438|ddddddd', '2023-12-17 00:00:00',1),
+  ('74384438|ddddddd', '2023-12-19 00:00:00',1),
+  ('74384438|ddddddd', '2023-12-23 00:00:00',1),
+  ('74384438|ddddddd', '2023-12-24 00:00:00',1),
+  ('74384438|ddddddd', '2023-12-12 00:00:00',1);
+
+INSERT INTO empleado (dniusuario, nombres, apellidos, telefono, direccion, correo, estadocivil, fechanacimiento, sexo, estado)
+VALUES
+  (111222333, 'Sofia Alejandra', 'Ramirez Silva', 111222333, 'Calle XYZ', 'sofia@email.com', 'Casada', '1993-09-22', 'Femenino', 1),
+  (333444555, 'Gabriel Eduardo', 'Mendoza Castro', 333444555, 'Avenida 789', 'gabriel@email.com', 'Soltero', '1991-04-12', 'Masculino', 1),
+  (666777888, 'Valeria Isabel', 'Ortega Gutierrez', 666777888, 'Calle 987', 'valeria@email.com', 'Soltera', '1994-07-28', 'Femenino', 1),
+  (999000111, 'Hector Alonso', 'Fuentes Rios', 999000111, 'Avenida ABC', 'hector@email.com', 'Casado', '1987-02-15', 'Masculino', 1),
+  (222333444, 'Isabella Maria', 'Martinez Soto', 222333444, 'Calle 567', 'isabella@email.com', 'Soltera', '1996-11-08', 'Femenino', 1),
+  (555666777, 'Luis Miguel', 'Gomez Salazar', 555666777, 'Avenida DEF', 'luis@email.com', 'Casado', '1983-10-03', 'Masculino', 1),
+  (888999000, 'Mariana Alejandra', 'Fernandez Ortiz', 888999000, 'Calle 345', 'mariana@email.com', 'Soltera', '1990-08-14', 'Femenino', 1),
+  (121314151, 'Martin Alejandro', 'Hernandez Vargas', 121314151, 'Avenida GHI', 'martin@email.com', 'Soltero', '1989-05-26', 'Masculino', 1),
+  (161718192, 'Camila Fernanda', 'Torres Mendez', 161718192, 'Calle 789', 'camila@email.com', 'Casada', '1992-03-17', 'Femenino', 1),
+  (202122232, 'Javier Andres', 'Cruz Paredes', 202122232, 'Avenida JKL', 'javier@email.com', 'Soltero', '1988-12-09', 'Masculino', 1),
+  (242526272, 'Lucia Gabriela', 'Rojas Castellanos', 242526272, 'Calle 123', 'lucia@email.com', 'Soltera', '1997-02-01', 'Femenino', 1),
+  (282930313, 'Diego Alejandro', 'Gutierrez Navarro', 282930313, 'Avenida MNO', 'diego@email.com', 'Soltero', '1994-06-23', 'Masculino', 1),
+  (323334353, 'Natalia Beatriz', 'Cordova Rivera', 323334353, 'Calle 456', 'natalia@email.com', 'Casada', '1985-09-30', 'Femenino', 1),
+  (363738394, 'Eduardo Andres', 'Lara Trujillo', 363738394, 'Avenida PQR', 'eduardo@email.com', 'Soltero', '1991-08-11', 'Masculino', 1),
+  (404142434, 'Sara Valentina', 'Santos Ospina', 404142434, 'Calle 789', 'sara@email.com', 'Casada', '1986-04-04', 'Femenino', 1),
+  (444546474, 'Alex Javier', 'Rodriguez Cardona', 444546474, 'Avenida STU', 'alex@email.com', 'Soltero', '1993-01-27', 'Masculino', 1);
+  
+  
+  
+  -- Insertar datos en la tabla 'empleado'
+INSERT INTO empleado (dniusuario, nombres, apellidos, telefono, direccion, correo, estadocivil, fechanacimiento, sexo, estado)
+VALUES (123456789, 'Juan', 'Pérez', 123456789, 'Calle Principal 123', 'juan.perez@example.com', 'Soltero', '1990-01-01', 'Masculino', 1);
+INSERT INTO estadoCumplimientoJornada (nombrejornada, estado) VALUES
+('JORNADA CUMPLIDA', 1),
+('TARDANZA', 1),
+('PERMISO', 1),
+('FALTA', 1),
+('DIA NO LABORABLE', 1);
+-- Insertar datos en la tabla 'horario'
+INSERT INTO horario (hora_inicio, hora_fin, estado)
+VALUES ('08:00:00', '17:00:00', 1);
+
+-- Insertar datos en la tabla 'horarioEmpleado'
+INSERT INTO horarioEmpleado (idempleado, idhorario, fechalaborada, horaentrada, horasalidaalmuerzo, horaentradaalmuerzo, horasalida, estado)
+VALUES (1, 1, '2024-01-12', '08:00:00', '12:00:00', '13:00:00', '17:00:00', 1);
+
+-- Insertar datos en la tabla 'resumenHoraAmanecida'
+INSERT INTO resumenHoraAmanecida (idempleado, fechalaborada, horaentrada, horasalida, estado)
+VALUES (1, '2024-01-12', '08:00:00', '17:00:00', 1);
+
+-- Insertar datos en la tabla 'resumenEmpleadoHoras'
+-- Insertar datos en la tabla 'resumenEmpleadoHoras' para el empleado 1 durante una semana
+INSERT INTO resumenEmpleadoHoras (idempleado, idhorarioEmpleado, fechatrabajo, horastrabajadas, horasextras, faltantes, Horastotal, idestadoCumplimientoJornada, descripcionpermiso)
+VALUES
+(2, 1, '2024-01-10', '08:00:00', '01:00:00', '00:00:00', '09:00:00', 1, ''),
+(2, 1, '2024-01-11', '08:00:00', '02:00:00', '00:00:00', '10:00:00', 2, 'Tardanza  por lluvia'),
+(2, 1, '2024-01-12', '08:00:00', '00:30:00', '00:00:00', '08:30:00', 2, 'Tardanza por choque'),
+(2, 1, '2024-01-13', '08:00:00', '00:00:00', '02:00:00', '06:00:00', 3, 'Permiso para que salga a pasear'),
+(2, 1, '2024-01-14', '08:00:00', '00:00:00', '00:00:00', '08:00:00', 4, 'Falta por motivo de enfermedad madre'),
+(2, 1, '2024-01-15', '08:00:00', '01:30:00', '00:00:00', '09:30:00', 2, 'Tardanza no justificada'),
+(2, 1, '2024-01-16', '08:00:00', '00:45:00', '00:00:00', '08:45:00', 1, '');
+
+-- Insertar datos en la tabla 'usuarios'
+INSERT INTO usuarios (idempleado, correo, contrasena, estado)
+VALUES (1, 'juan.perez@example.com', 'contrasena123', 1);
+
+-- Insertar datos en la tabla 'rolusuario'
+INSERT INTO rolusuario (idempleado, nombrerol, estado)
+VALUES (1, 'Empleado', 1);
+
+-- Insertar datos en la tabla 'Marcacion'
+INSERT INTO Marcacion (datosextraidos, estado)
+VALUES ('Datos de marcación', 1);
+
+
+
+

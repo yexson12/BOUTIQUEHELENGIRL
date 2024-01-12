@@ -1,3 +1,5 @@
+
+
 <footer class="footer">
 	<div class="container-fluid">
 		<nav class="pull-left">
@@ -25,7 +27,6 @@
 	</div>
 </footer>
 </div>
-
 <div class="quick-sidebar">
 	<a href="#" class="close-quick-sidebar">
 		<i class="flaticon-cross"></i>
@@ -492,6 +493,7 @@
 </div>
 <!-- End Custom template -->
 </div>
+
 <!--   Core JS Files   -->
 <script src="<?= base_url('/public/admin/assets/js/core/jquery.3.2.1.min.js'); ?>"></script>
 <script src="<?= base_url('/public/admin/assets/js/core/popper.min.js'); ?>"></script>
@@ -508,7 +510,6 @@
 <script src="<?= base_url('/public/admin/assets/js/plugin/moment/moment.min.js'); ?>"></script>
 
 <!-- Chart JS -->
-<script src="<?= base_url('/public/admin/assets/js/plugin/chart.js/chart.min.js'); ?>"></script>
 
 <!-- jQuery Sparkline -->
 <script src="<?= base_url('/public/admin/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js'); ?>"></script>
@@ -571,6 +572,9 @@
 <!-- Atlantis DEMO methods, don't include it in your project! -->
 <script src="<?= base_url('/public/admin/assets/js/setting-demo.js'); ?>"></script>
 <script src="<?= base_url('/public/admin/assets/js/demo.js'); ?>"></script>
+
+
+
 <script>
 	Circles.create({
 		id: 'circles-1',
@@ -716,6 +720,9 @@
 
 			});
 		});
+
+
+		
 	</script>
 </body>
 

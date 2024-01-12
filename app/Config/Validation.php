@@ -38,6 +38,11 @@ class Validation extends BaseConfig
         'single' => 'CodeIgniter\Validation\Views\single',
     ];
 
+
+    public $Marcacion = [   
+        'datosextraidos' => 'required|min_length[3]|max_length[255]',      
+        'estado' => 'numeric|min_length[1]|max_length[5000]'
+    ];
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
