@@ -1,0 +1,11 @@
+DELIMITER //
+
+CREATE PROCEDURE ObtenerResumenEmpleadoHoras() -- CALL ObtenerResumenEmpleadoHoras();
+BEGIN
+    SELECT r.idresumenempleadohoras, ej.idestadoCumplimientoJornada, ej.nombrejornada
+    FROM resumenempleadohoras r
+    INNER JOIN estadocumplimientojornada ej ON ej.idestadoCumplimientoJornada = r.idestadoCumplimientoJornada
+    WHERE ej.idestadoCumplimientoJornada IN (1, 2, 4);
+END //
+
+DELIMITER ;

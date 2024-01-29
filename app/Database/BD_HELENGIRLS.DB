@@ -70,7 +70,7 @@ CREATE  TABLE resumenEmpleadoHoras (
   idresumenempleadohoras INT PRIMARY KEY AUTO_INCREMENT,  
   idempleado int,
   idhorarioEmpleado int,
-  fechatrabajo date,
+    fechatrabajo datetime,
   horastrabajadas time,
   horasextras time,
   faltantes time,

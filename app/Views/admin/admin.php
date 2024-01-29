@@ -23,15 +23,16 @@
 								<div class="card-head-row">
 									<div class="card-title">Estadistica de Asistencia</div>
 									<div class="card-tools">
-										<ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab" role="tablist">
+
+										<ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab1" role="tablist">
 											<li class="nav-item">
-												<a class="nav-link" id="pills-today" data-toggle="pill" href="#pills-today" role="tab" aria-selected="true">Today</a>
+												<a class="nav-link " id="pills-week1" data-toggle="pill" href="#pills-week1" role="tab" aria-selected="false">Semanal</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link active" id="pills-week" data-toggle="pill" href="#pills-week" role="tab" aria-selected="false">Week</a>
+												<a class="nav-link active" id="pills-today1" data-toggle="pill" href="#pills-today1" role="tab" aria-selected="true">Diaria</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link" id="pills-month" data-toggle="pill" href="#pills-month" role="tab" aria-selected="false">Month</a>
+												<a class="nav-link" id="pills-month1" data-toggle="pill" href="#pills-month1" role="tab" aria-selected="false">Mensual</a>
 											</li>
 										</ul>
 									</div>
@@ -44,7 +45,7 @@
 										<div id="circles-1"></div>
 										<h6 class="fw-bold mt-3 mb-0">Jornada Cumplida</h6>
 									</div>
-								
+
 									<div class="px-2 pb-2 pb-md-0 text-center">
 										<div id="circles-2"></div>
 										<h6 class="fw-bold mt-3 mb-0">Tardanzas</h6>
@@ -63,29 +64,29 @@
 								<div class="card-head-row">
 									<div class="card-title">Estadistica Semanal</div>
 									<div class="card-tools">
-										<ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab" role="tablist">
+										<ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab1" role="tablist">
 											<li class="nav-item">
-												<a class="nav-link" id="pills-today" data-toggle="pill" href="#pills-today" role="tab" aria-selected="true">Semanal</a>
+												<a class="nav-link " id="pills-week2" data-toggle="pill" href="#pills-week2" role="tab" aria-selected="false">Semanal</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link active" id="pills-week" data-toggle="pill" href="#pills-week" role="tab" aria-selected="false">Mensual</a>
+												<a class="nav-link active" id="pills-today2" data-toggle="pill" href="#pills-today2" role="tab" aria-selected="true">Diaria</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link" id="pills-month" data-toggle="pill" href="#pills-month" role="tab" aria-selected="false">Anual</a>
+												<a class="nav-link" id="pills-month2" data-toggle="pill" href="#pills-month2" role="tab" aria-selected="false">Mensual</a>
 											</li>
 										</ul>
 									</div>
 								</div>
 							</div>
-							<div class="card-body">
-								<div class="row py-3">
-									<div class="col-md-12">
-										<div id="chart-container">
-											<canvas id="totalIncomeChart"></canvas>
-										</div>
-									</div>
+
+
+							<div class="col-md-12">
+								<div id="chart-container">
+									<canvas id="totalIncomeChart"></canvas>
 								</div>
 							</div>
+
+
 						</div>
 					</div>
 				</div>
@@ -806,13 +807,13 @@
 									<div class="card-tools">
 										<ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab" role="tablist">
 											<li class="nav-item">
-												<a class="nav-link" id="pills-today" data-toggle="pill" href="#pills-today" role="tab" aria-selected="true">Today</a>
+												<a class="nav-link " id="pills-week3" data-toggle="pill" href="#pills-week3" role="tab" aria-selected="false">Semanal</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link active" id="pills-week" data-toggle="pill" href="#pills-week" role="tab" aria-selected="false">Week</a>
+												<a class="nav-link active" id="pills-today3" data-toggle="pill" href="#pills-today3" role="tab" aria-selected="true">Diaria</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link" id="pills-month" data-toggle="pill" href="#pills-month" role="tab" aria-selected="false">Month</a>
+												<a class="nav-link" id="pills-month3" data-toggle="pill" href="#pills-month3" role="tab" aria-selected="false">Mensual</a>
 											</li>
 										</ul>
 									</div>
@@ -889,3 +890,204 @@
 				</div>
 			</div>
 		</div>
+
+		<script>
+			//  // Función para obtener la fecha de inicio y fin del día
+			const obtenerFechasDiariasgeneral = () => [moment().startOf('day'), moment().endOf('day')];
+			const obtenerFechasDiarias = () => [moment().startOf('day'), moment().endOf('day')];
+			const obtenerFechasSemanales = () => [moment().startOf('isoWeek'), moment().endOf('isoWeek')];
+			const obtenerFechasMensuales = () => [moment().startOf('month'), moment().endOf('month')];
+
+			$(document).ready(function() {
+
+				var fechasdefauld = obtenerFechasDiariasgeneral();
+				var fechaIniciodefa = fechasdefauld[0].format('YYYY-MM-DD 00:00');
+				var fechaFindefa = fechasdefauld[1].format('YYYY-MM-DD HH:mm');
+				obtenerllenarciculos(fechaIniciodefa, fechaFindefa);
+				var fechas;
+				// Formatear las fechas utilizando Moment.js
+				var fechaInicioFormateada;
+				var fechaFinFormateada;
+				// Asignar evento de clic a la pestaña Semanal
+				$('#pills-week1').on('click', function() {
+
+					fechas = obtenerFechasSemanales();
+					// Formatear las fechas utilizando Moment.js
+					fechaInicioFormateada = fechas[0].format('YYYY-MM-DD 00:00');
+					fechaFinFormateada = fechas[1].format('YYYY-MM-DD HH:mm');
+					obtenerllenarciculos(fechaInicioFormateada, fechaFinFormateada);
+				});
+
+				// Asignar evento de clic a la pestaña Diaria
+				$('#pills-today1').on('click', function() {
+					fechas = obtenerFechasDiarias();
+					// Formatear las fechas utilizando Moment.js
+					fechaInicioFormateada = fechas[0].format('YYYY-MM-DD 00:00');
+					fechaFinFormateada = fechas[1].format('YYYY-MM-DD HH:mm');
+					obtenerllenarciculos(fechaInicioFormateada, fechaFinFormateada);
+				});
+
+				// Asignar evento de clic a la pestaña Mensual
+				$('#pills-month1').on('click', function() {
+					fechas = obtenerFechasMensuales();
+					// Formatear las fechas utilizando Moment.js
+					fechaInicioFormateada = fechas[0].format('YYYY-MM-DD 00:00');
+					fechaFinFormateada = fechas[1].format('YYYY-MM-DD HH:mm');
+					obtenerllenarciculos(fechaInicioFormateada, fechaFinFormateada);
+				});
+			});
+
+			function obtenerllenarciculos(fechaIniciodefa, fechaFindefa) {
+				var url = "<?= base_url('listadojornada'); ?>";
+				var params = {
+					fecha_inicio: fechaIniciodefa,
+					fecha_fin: fechaFindefa
+				};
+				console.log(url);
+				console.log(params);
+				$.ajax({
+					url: url,
+					method: 'POST', // Cambia el método a POST
+					dataType: 'json',
+					data: params, // Incluye los parámetros aquí
+					success: function(data) {
+						var conteogeneral = 0;
+						var countJornada1 = 0;
+						var countJornada2 = 0;
+						var countJornada3 = 0;
+
+						if (data.success === false) {
+							// Si success es false, establecer todas las variables a 0
+							conteogeneral = 0;
+							countJornada1 = 0;
+							countJornada2 = 0;
+							countJornada3 = 0;
+						} else {
+							// Iterar sobre los datos y realizar el conteo
+							var detalles = data.datos; // Asumiendo que 'datos' es la propiedad correcta, ajusta según tu estructura
+							console.log(detalles);
+
+							detalles.forEach(function(item) {
+								conteogeneral++;
+								switch (item.idestadoCumplimientoJornada) {
+									case '1':
+										countJornada1++;
+										break;
+									case '2':
+										countJornada2++;
+										break;
+									case '4':
+										countJornada3++;
+										break;
+										// Puedes agregar más casos según sea necesario
+								}
+							});
+						}
+						Circles.create({
+							id: 'circles-1',
+							radius: 45,
+							value: countJornada1,
+							maxValue: conteogeneral,
+							width: 7,
+							text: countJornada1,
+							colors: ['#f1f1f1', '#2BB930'],
+							duration: 400,
+							wrpClass: 'circles-wrp',
+							textClass: 'circles-text',
+							styleWrapper: true,
+							styleText: true
+						})
+
+
+						Circles.create({
+							id: 'circles-2',
+							radius: 45,
+							value: countJornada2,
+							maxValue: conteogeneral,
+							width: 7,
+							text: countJornada2,
+							colors: ['#f1f1f1', '#f1c605'],
+							duration: 400,
+							wrpClass: 'circles-wrp',
+							textClass: 'circles-text',
+							styleWrapper: true,
+							styleText: true
+						})
+
+						Circles.create({
+							id: 'circles-3',
+							radius: 45,
+							value: countJornada3,
+							maxValue: conteogeneral,
+							width: 7,
+							text: countJornada3, // Modificar a 1 para que el texto se muestre siempre
+							colors: ['#f1f1f1', '#F25961'],
+							duration: 400,
+							wrpClass: 'circles-wrp',
+							textClass: 'circles-text',
+							styleWrapper: true,
+							styleText: true
+						});
+						if (countJornada3 === 0) {
+							document.querySelector('#circles-1 .circles-text').innerText = '0';
+							document.querySelector('#circles-2 .circles-text').innerText = '0';
+							document.querySelector('#circles-3 .circles-text').innerText = '0';
+						}
+
+					},
+					error: function(xhr, status, error) {
+						// Manejar errores
+						console.log(error);
+					}
+				});
+			}
+		</script>
+		<script>
+			var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
+
+			var mytotalIncomeChart = new Chart(totalIncomeChart, {
+				type: 'bar',
+				data: {
+					labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
+					datasets: [{
+						label: "Total Income",
+						backgroundColor: '#ff9e27',
+						borderColor: 'rgb(23, 125, 255)',
+						data: [6, 4, 9, 5, 4, 6, 4, 3, 8, 10],
+					}],
+				},
+				options: {
+					responsive: true,
+					maintainAspectRatio: false,
+					legend: {
+						display: false,
+					},
+					scales: {
+						yAxes: [{
+							ticks: {
+								display: false //this will remove only the label
+							},
+							gridLines: {
+								drawBorder: false,
+								display: false
+							}
+						}],
+						xAxes: [{
+							gridLines: {
+								drawBorder: false,
+								display: false
+							}
+						}]
+					},
+				}
+			});
+
+			$('#lineChart').sparkline([105, 103, 123, 100, 95, 105, 115], {
+				type: 'line',
+				height: '70',
+				width: '100%',
+				lineWidth: '2',
+				lineColor: '#ffa534',
+				fillColor: 'rgba(255, 165, 52, .14)'
+			});
+		</script>

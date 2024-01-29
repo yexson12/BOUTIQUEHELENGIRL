@@ -19,3 +19,11 @@ $routes->resource('marcacionapi',['controller'=> 'MarcacionController']);
 //fIN
 
 $routes->get('listaempleadonuevo', 'Jornada\Jornadacontroller::listarempleado');
+
+
+///   listado vista
+// Ruta para tu controlador y método
+//$routes->get('listadojornada', 'Admin::obtenerjornada');
+
+$routes->post('listadojornada', 'Admin::obtenerjornada');
+
