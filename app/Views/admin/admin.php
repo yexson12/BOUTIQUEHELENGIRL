@@ -62,7 +62,7 @@
 						<div class="card full-height">
 							<div class="card-header">
 								<div class="card-head-row">
-									<div class="card-title">Estadistica Semanal</div>
+									<div class="card-title">Estadistica Jornadas cumplidas</div>
 									<div class="card-tools">
 										<ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab1" role="tablist">
 											<li class="nav-item">
@@ -1048,12 +1048,12 @@
 			var mytotalIncomeChart = new Chart(totalIncomeChart, {
 				type: 'bar',
 				data: {
-					labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
+					labels: ["L", "Ma", "Mi", "J", "V", "S", "D"],
 					datasets: [{
 						label: "Total Income",
 						backgroundColor: '#ff9e27',
 						borderColor: 'rgb(23, 125, 255)',
-						data: [6, 4, 9, 5, 4, 6, 4, 3, 8, 10],
+						data: [6, 4, 9, 5, 4, 6, 40],
 					}],
 				},
 				options: {
