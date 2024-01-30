@@ -62,7 +62,7 @@
 						<div class="card full-height">
 							<div class="card-header">
 								<div class="card-head-row">
-									<div class="card-title">Estadistica Jornadas cumplidas</div>
+									<div class="card-title">Jornadas cumplidas</div>
 									<div class="card-tools">
 										<ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab1" role="tablist">
 											<li class="nav-item">
@@ -82,7 +82,7 @@
 
 							<div class="col-md-12">
 								<div id="chart-container">
-									<canvas id="totalIncomeChart"></canvas>
+									<canvas id="pieChart"></canvas>
 								</div>
 							</div>
 
@@ -91,468 +91,81 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-8">
+					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header">
 								<div class="card-head-row">
-									<div class="card-title">User Statistics</div>
+									<div class="card-title">Estadistica Asistencia</div>
 									<div class="card-tools">
-										<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
-											<span class="btn-label">
-												<i class="fa fa-pencil"></i>
-											</span>
-											Export
-										</a>
-										<a href="#" class="btn btn-info btn-border btn-round btn-sm">
-											<span class="btn-label">
-												<i class="fa fa-print"></i>
-											</span>
-											Print
-										</a>
+										<ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab1" role="tablist">
+											<li class="nav-item">
+												<a class="nav-link " id="pills-week4" data-toggle="pill" href="#pills-week4" role="tab" aria-selected="false">Semanal</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link active" id="pills-today4" data-toggle="pill" href="#pills-today4" role="tab" aria-selected="true">Anual</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" id="pills-month4" data-toggle="pill" href="#pills-month4" role="tab" aria-selected="false">Mensual</a>
+											</li>
+										</ul>
+
+
 									</div>
 								</div>
 							</div>
 							<div class="card-body">
 								<div class="chart-container" style="min-height: 375px">
+									<canvas id="multipleBarChart"></canvas>
+
+								</div>
+								<div style="display:none;" class="chart-container" style="min-height: 375px">
 									<canvas id="statisticsChart"></canvas>
-								</div>
-								<div id="myChartLegend"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card card-primary">
-							<div class="card-header">
-								<div class="card-title">Daily Sales</div>
-								<div class="card-category">March 25 - April 02</div>
-							</div>
-							<div class="card-body pb-0">
-								<div class="mb-4 mt-2">
-									<h1>$4,578.58</h1>
-								</div>
-								<div class="pull-in">
-									<canvas id="dailySalesChart"></canvas>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-body pb-0">
-								<div class="h1 fw-bold float-right text-warning">+7%</div>
-								<h2 class="mb-2">213</h2>
-								<p class="text-muted">Transactions</p>
-								<div class="pull-in sparkline-fix">
-									<div id="lineChart"></div>
+
 								</div>
 							</div>
 						</div>
 					</div>
+
 				</div>
-				<div class="row row-card-no-pd">
-					<div class="col-md-12">
-						<div class="card">
-							<div class="card-header">
-								<div class="card-head-row card-tools-still-right">
-									<h4 class="card-title">Users Geolocation</h4>
-									<div class="card-tools">
-										<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-angle-down"></span></button>
-										<button class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"><span class="fa fa-sync-alt"></span></button>
-										<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-times"></span></button>
-									</div>
-								</div>
-								<p class="card-category">
-									Map of the distribution of users around the world</p>
-							</div>
-							<div class="card-body">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="table-responsive table-hover table-sales">
-											<table class="table">
-												<tbody>
-													<tr>
-														<td>
-															<div class="flag">
-																<img src="<?= base_url('/public/admin/assets/img/flags/id.png'); ?>" alt="indonesia">
-															</div>
-														</td>
-														<td>Indonesia</td>
-														<td class="text-right">
-															2.320
-														</td>
-														<td class="text-right">
-															42.18%
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="flag">
-																<img src="<?= base_url('/public/admin/assets/img/flags/us.png'); ?>" alt="united states">
-															</div>
-														</td>
-														<td>USA</td>
-														<td class="text-right">
-															240
-														</td>
-														<td class="text-right">
-															4.36%
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="flag">
-																<img src="<?= base_url('/public/admin/assets/img/flags/au.png'); ?>" alt="australia">
-															</div>
-														</td>
-														<td>Australia</td>
-														<td class="text-right">
-															119
-														</td>
-														<td class="text-right">
-															2.16%
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="flag">
-																<img src="<?= base_url('/public/admin/assets/img/flags/ru.png'); ?>" alt="russia">
-															</div>
-														</td>
-														<td>Russia</td>
-														<td class="text-right">
-															1.081
-														</td>
-														<td class="text-right">
-															19.65%
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="flag">
-																<img src="<?= base_url('/public/admin/assets/img/flags/cn.png'); ?>" alt="china">
-															</div>
-														</td>
-														<td>China</td>
-														<td class="text-right">
-															1.100
-														</td>
-														<td class="text-right">
-															20%
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="flag">
-																<img src="<?= base_url('/public/admin/assets/img/flags/br.png'); ?>" alt="brazil">
-															</div>
-														</td>
-														<td>Brasil</td>
-														<td class="text-right">
-															640
-														</td>
-														<td class="text-right">
-															11.63%
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="mapcontainer">
-											<div id="map-example" class="vmap"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="card">
-							<div class="card-header">
-								<div class="card-title">Top Products</div>
-							</div>
-							<div class="card-body pb-0">
-								<div class="d-flex">
-									<div class="avatar">
-										<img src="<?= base_url('/public/admin/assets/img/logoproduct.svg'); ?>" alt="..." class="avatar-img rounded-circle">
-									</div>
-									<div class="flex-1 pt-1 ml-2">
-										<h6 class="fw-bold mb-1">CSS</h6>
-										<small class="text-muted">Cascading Style Sheets</small>
-									</div>
-									<div class="d-flex ml-auto align-items-center">
-										<h3 class="text-info fw-bold">+$17</h3>
-									</div>
-								</div>
-								<div class="separator-dashed"></div>
-								<div class="d-flex">
-									<div class="avatar">
-										<img src="<?= base_url('/public/admin/assets/img/logoproduct.svg'); ?>" alt="..." class="avatar-img rounded-circle">
-									</div>
-									<div class="flex-1 pt-1 ml-2">
-										<h6 class="fw-bold mb-1">J.CO Donuts</h6>
-										<small class="text-muted">The Best Donuts</small>
-									</div>
-									<div class="d-flex ml-auto align-items-center">
-										<h3 class="text-info fw-bold">+$300</h3>
-									</div>
-								</div>
-								<div class="separator-dashed"></div>
-								<div class="d-flex">
-									<div class="avatar">
-										<img src="<?= base_url('/public/admin/assets/img/logoproduct3.svg'); ?>" alt="..." class="avatar-img rounded-circle">
-									</div>
-									<div class="flex-1 pt-1 ml-2">
-										<h6 class="fw-bold mb-1">Ready Pro</h6>
-										<small class="text-muted">Bootstrap 4 Admin Dashboard</small>
-									</div>
-									<div class="d-flex ml-auto align-items-center">
-										<h3 class="text-info fw-bold">+$350</h3>
-									</div>
-								</div>
-								<div class="separator-dashed"></div>
-								<div class="pull-in">
-									<canvas id="topProductsChart"></canvas>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card">
-							<div class="card-body">
-								<div class="card-title fw-mediumbold">Suggested People</div>
-								<div class="card-list">
-									<div class="item-list">
-										<div class="avatar">
-											<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-										</div>
-										<div class="info-user ml-3">
-											<div class="username">Jimmy Denis</div>
-											<div class="status">Graphic Designer</div>
-										</div>
-										<button class="btn btn-icon btn-primary btn-round btn-xs">
-											<i class="fa fa-plus"></i>
-										</button>
-									</div>
-									<div class="item-list">
-										<div class="avatar">
-											<img src="<?= base_url('/public/admin/assets/img/chadengle.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-										</div>
-										<div class="info-user ml-3">
-											<div class="username">Chad</div>
-											<div class="status">CEO Zeleaf</div>
-										</div>
-										<button class="btn btn-icon btn-primary btn-round btn-xs">
-											<i class="fa fa-plus"></i>
-										</button>
-									</div>
-									<div class="item-list">
-										<div class="avatar">
-											<img src="<?= base_url('/public/admin/assets/img/talha.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-										</div>
-										<div class="info-user ml-3">
-											<div class="username">Talha</div>
-											<div class="status">Front End Designer</div>
-										</div>
-										<button class="btn btn-icon btn-primary btn-round btn-xs">
-											<i class="fa fa-plus"></i>
-										</button>
-									</div>
-									<div class="item-list">
-										<div class="avatar">
-											<img src="<?= base_url('/public/admin/assets/img/mlane.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-										</div>
-										<div class="info-user ml-3">
-											<div class="username">John Doe</div>
-											<div class="status">Back End Developer</div>
-										</div>
-										<button class="btn btn-icon btn-primary btn-round btn-xs">
-											<i class="fa fa-plus"></i>
-										</button>
-									</div>
-									<div class="item-list">
-										<div class="avatar">
-											<img src="<?= base_url('/public/admin/assets/img/talha.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-										</div>
-										<div class="info-user ml-3">
-											<div class="username">Talha</div>
-											<div class="status">Front End Designer</div>
-										</div>
-										<button class="btn btn-icon btn-primary btn-round btn-xs">
-											<i class="fa fa-plus"></i>
-										</button>
-									</div>
-									<div class="item-list">
-										<div class="avatar">
-											<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-										</div>
-										<div class="info-user ml-3">
-											<div class="username">Jimmy Denis</div>
-											<div class="status">Graphic Designer</div>
-										</div>
-										<button class="btn btn-icon btn-primary btn-round btn-xs">
-											<i class="fa fa-plus"></i>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card card-primary bg-primary-gradient">
-							<div class="card-body">
-								<h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Active user right now</h4>
-								<h1 class="mb-4 fw-bold">17</h1>
-								<h4 class="mt-3 b-b1 pb-2 mb-5 fw-bold">Page view per minutes</h4>
-								<div id="activeUsersChart"></div>
-								<h4 class="mt-5 pb-3 mb-0 fw-bold">Top active pages</h4>
-								<ul class="list-unstyled">
-									<li class="d-flex justify-content-between pb-1 pt-1"><small>/product/readypro/index.html</small> <span>7</span></li>
-									<li class="d-flex justify-content-between pb-1 pt-1"><small>/product/atlantis/demo.html</small> <span>10</span></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+
+
 				<div class="row">
 					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header">
 								<div class="d-flex align-items-center">
-									<h4 class="card-title">Add Row</h4>
-									<button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#addRowModal">
-										<i class="fa fa-plus"></i>
-										Add Row
-									</button>
+									<h4 class="card-title">ESTADISTICA POR TRABAJADOR </h4>
+
 								</div>
 							</div>
 							<div class="card-body">
 								<!-- Modal -->
-								<div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-hidden="true">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header border-0">
-												<h5 class="modal-title">
-													<span class="fw-mediumbold">
-														New</span>
-													<span class="fw-light">
-														Row
-													</span>
-												</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-													<span aria-hidden="true">&times;</span>
-												</button>
-											</div>
-											<div class="modal-body">
-												<p class="small">Create a new row using this form, make sure you fill them all</p>
-												<form>
-													<div class="row">
-														<div class="col-sm-12">
-															<div class="form-group form-group-default">
-																<label>Name</label>
-																<input id="addName" type="text" class="form-control" placeholder="fill name">
-															</div>
-														</div>
-														<div class="col-md-6 pr-0">
-															<div class="form-group form-group-default">
-																<label>Position</label>
-																<input id="addPosition" type="text" class="form-control" placeholder="fill position">
-															</div>
-														</div>
-														<div class="col-md-6">
-															<div class="form-group form-group-default">
-																<label>Office</label>
-																<input id="addOffice" type="text" class="form-control" placeholder="fill office">
-															</div>
-														</div>
-													</div>
-												</form>
-											</div>
-											<div class="modal-footer border-0">
-												<button type="button" id="addRowButton" class="btn btn-primary">Add</button>
-												<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
 
 								<div class="table-responsive">
-									<table id="add-row" class="display table table-striped table-hover">
+									<table id="idtablausuario" class="display table table-striped table-hover">
+
 										<thead>
 											<tr>
 
-												<th style="background-color: #02fcef; color: black;width: 30%;">Name</th>
-												<th style="background-color: #02fcef; color: black;">Position</th>
-												<th style="background-color: #02fcef; color: black;">Office</th>
-												<th style="background-color: #02fcef; color: black; width: 10%;">Action</th>
+												<th style="background-color: #6f42c1; color: #fcfcfc;width: 30%;">Name</th>
+												<th style="background-color: #6f42c1; color: #fcfcfc;">Position</th>
+												<th style="background-color: #6f42c1; color: #fcfcfc;">Office</th>
+												<th style="background-color: #6f42c1; color: #fcfcfc; width: 10%;">Action</th>
 
 											</tr>
 										</thead>
 										<tfoot>
 											<tr>
 
-												<th style="background-color: #02fcef; color: black;">Name</th>
-												<th style="background-color: #02fcef; color: black;">Position</th>
-												<th style="background-color: #02fcef; color: black;">Office</th>
-												<th style="background-color: #02fcef; color: black;">Action</th>
+												<th style="background-color: #6f42c1; color: #fcfcfc;">Name</th>
+												<th style="background-color: #6f42c1; color: #fcfcfc;">Position</th>
+												<th style="background-color: #6f42c1; color: #fcfcfc;">Office</th>
+												<th style="background-color: #6f42c1; color: #fcfcfc;">Action</th>
 											</tr>
 										</tfoot>
 										<tbody>
-											<tr>
 
-												<td>
-													<div style="display: flex; align-items: center;">
-														<div class="avatar" style="margin-right: 10px;">
-															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-														</div>
-														<div>
-															<p style="margin: 0;">Software Engineer</p>
-														</div>
-													</div>
-												</td>
 
-												<td>System Architect</td>
-												<td>Edinburgh</td>
-												<td>
-													<div class="form-button-action">
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Ver Detalle">
-															<i class="fa fa-edit"></i>
-														</button>
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-															<i class="fa fa-edit"></i>
-														</button>
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-															<i class="fa fa-times"></i>
-														</button>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<div style="display: flex; align-items: center;">
-														<div class="avatar" style="margin-right: 10px;">
-															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-														</div>
-														<div>
-															<p style="margin: 0;">Software Engineer</p>
-														</div>
-													</div>
-												</td>
-
-												<td>Accountant</td>
-												<td>Tokyo</td>
-												<td>
-													<div class="form-button-action">
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-															<i class="fa fa-edit"></i>
-														</button>
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-															<i class="fa fa-times"></i>
-														</button>
-													</div>
-												</td>
-											</tr>
 											<tr>
 												<td>
 													<div style="display: flex; align-items: center;">
@@ -603,131 +216,10 @@
 													</div>
 												</td>
 											</tr>
-											<tr>
-												<td>
-													<div style="display: flex; align-items: center;">
-														<div class="avatar" style="margin-right: 10px;">
-															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-														</div>
-														<div>
-															<p style="margin: 0;">Software Engineer</p>
-														</div>
-													</div>
-												</td>
 
-												<td>Accountant</td>
-												<td>Tokyo</td>
-												<td>
-													<div class="form-button-action">
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-															<i class="fa fa-edit"></i>
-														</button>
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-															<i class="fa fa-times"></i>
-														</button>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<div style="display: flex; align-items: center;">
-														<div class="avatar" style="margin-right: 10px;">
-															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-														</div>
-														<div>
-															<p style="margin: 0;">Software Engineer</p>
-														</div>
-													</div>
-												</td>
 
-												<td>Integration Specialist</td>
-												<td>New York</td>
-												<td>
-													<div class="form-button-action">
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-															<i class="fa fa-edit"></i>
-														</button>
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-															<i class="fa fa-times"></i>
-														</button>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<div style="display: flex; align-items: center;">
-														<div class="avatar" style="margin-right: 10px;">
-															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-														</div>
-														<div>
-															<p style="margin: 0;">Software Engineer</p>
-														</div>
-													</div>
-												</td>
 
-												<td>Sales Assistant</td>
-												<td>San Francisco</td>
-												<td>
-													<div class="form-button-action">
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-															<i class="fa fa-edit"></i>
-														</button>
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-															<i class="fa fa-times"></i>
-														</button>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<div style="display: flex; align-items: center;">
-														<div class="avatar" style="margin-right: 10px;">
-															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-														</div>
-														<div>
-															<p style="margin: 0;">Software Engineer</p>
-														</div>
-													</div>
-												</td>
 
-												<td>Integration Specialist</td>
-												<td>Tokyo</td>
-												<td>
-													<div class="form-button-action">
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-															<i class="fa fa-edit"></i>
-														</button>
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-															<i class="fa fa-times"></i>
-														</button>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<div style="display: flex; align-items: center;">
-														<div class="avatar" style="margin-right: 10px;">
-															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
-														</div>
-														<div>
-															<p style="margin: 0;">Software Engineer</p>
-														</div>
-													</div>
-												</td>
-
-												<td>Javascript Developer</td>
-												<td>San Francisco</td>
-												<td>
-													<div class="form-button-action">
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-															<i class="fa fa-edit"></i>
-														</button>
-														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-															<i class="fa fa-times"></i>
-														</button>
-													</div>
-												</td>
-											</tr>
 											<tr>
 												<td>
 													<div style="display: flex; align-items: center;">
@@ -890,20 +382,47 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			$(document).ready(function() {
 
+
+			
+				new DataTable('#idtablausuario', {
+					columnDefs: [{
+							targets: [0],
+							orderData: [0, 1]
+						},
+						{
+							targets: [1],
+							orderData: [1, 0]
+						},
+						{
+							targets: [4],
+							orderData: [4, 0]
+						}
+					]
+				});
+			});
+		</script>
 		<script>
 			//  // Función para obtener la fecha de inicio y fin del día
 			const obtenerFechasDiariasgeneral = () => [moment().startOf('day'), moment().endOf('day')];
 			const obtenerFechasDiarias = () => [moment().startOf('day'), moment().endOf('day')];
 			const obtenerFechasSemanales = () => [moment().startOf('isoWeek'), moment().endOf('isoWeek')];
 			const obtenerFechasMensuales = () => [moment().startOf('month'), moment().endOf('month')];
-
+			const obtenerFechasAnuales = () => [moment().startOf('year').startOf('month'), moment().endOf('year').endOf('month')];
 			$(document).ready(function() {
 
 				var fechasdefauld = obtenerFechasDiariasgeneral();
 				var fechaIniciodefa = fechasdefauld[0].format('YYYY-MM-DD 00:00');
 				var fechaFindefa = fechasdefauld[1].format('YYYY-MM-DD HH:mm');
+				var fechasAnualdefauld = obtenerFechasAnuales();
+				var fechaAnualIniciodefa = fechasAnualdefauld[0].format('YYYY-MM-DD 00:00');
+				var fechaAnualFindefa = fechasAnualdefauld[1].format('YYYY-MM-DD HH:mm');
 				obtenerllenarciculos(fechaIniciodefa, fechaFindefa);
+				validarporcentajeingreso(fechaIniciodefa, fechaFindefa);
+				var rangoa = "anual";
+				validartablaporcentaje(fechaAnualIniciodefa, fechaAnualFindefa, rangoa);
 				var fechas;
 				// Formatear las fechas utilizando Moment.js
 				var fechaInicioFormateada;
@@ -935,6 +454,69 @@
 					fechaFinFormateada = fechas[1].format('YYYY-MM-DD HH:mm');
 					obtenerllenarciculos(fechaInicioFormateada, fechaFinFormateada);
 				});
+
+
+				//PORCENTAJE CIRCULO
+				$('#pills-week2').on('click', function() {
+
+					fechas = obtenerFechasSemanales();
+					// Formatear las fechas utilizando Moment.js
+					fechaInicioFormateada = fechas[0].format('YYYY-MM-DD 00:00');
+					fechaFinFormateada = fechas[1].format('YYYY-MM-DD HH:mm');
+					validarporcentajeingreso(fechaInicioFormateada, fechaFinFormateada);
+				});
+
+				// Asignar evento de clic a la pestaña Diaria
+				$('#pills-today2').on('click', function() {
+					fechas = obtenerFechasDiarias();
+					// Formatear las fechas utilizando Moment.js
+					fechaInicioFormateada = fechas[0].format('YYYY-MM-DD 00:00');
+					fechaFinFormateada = fechas[1].format('YYYY-MM-DD HH:mm');
+					validarporcentajeingreso(fechaInicioFormateada, fechaFinFormateada);
+				});
+
+				// Asignar evento de clic a la pestaña Mensual
+				$('#pills-month2').on('click', function() {
+					fechas = obtenerFechasMensuales();
+					// Formatear las fechas utilizando Moment.js
+					fechaInicioFormateada = fechas[0].format('YYYY-MM-DD 00:00');
+					fechaFinFormateada = fechas[1].format('YYYY-MM-DD HH:mm');
+					validarporcentajeingreso(fechaInicioFormateada, fechaFinFormateada);
+				});
+
+
+
+				//TABLA PORCENTAJE CIRCULO
+				$('#pills-week4').on('click', function() {
+
+					fechas = obtenerFechasSemanales();
+					var rango = "semanal";
+					// Formatear las fechas utilizando Moment.js
+					fechaInicioFormateada = fechas[0].format('YYYY-MM-DD 00:00');
+					fechaFinFormateada = fechas[1].format('YYYY-MM-DD HH:mm');
+					validartablaporcentaje(fechaInicioFormateada, fechaFinFormateada, rango);
+				});
+
+				// Asignar evento de clic a la pestaña Diaria
+				$('#pills-today4').on('click', function() {
+					fechas = obtenerFechasAnuales();
+					var rango = "anual";
+					// Formatear las fechas utilizando Moment.js
+					fechaInicioFormateada = fechas[0].format('YYYY-MM-DD 00:00');
+					fechaFinFormateada = fechas[1].format('YYYY-MM-DD HH:mm');
+					validartablaporcentaje(fechaInicioFormateada, fechaFinFormateada, rango);
+				});
+
+				// Asignar evento de clic a la pestaña Mensual
+				$('#pills-month4').on('click', function() {
+					fechas = obtenerFechasMensuales();
+					var rango = "mensual";
+					// Formatear las fechas utilizando Moment.js
+					fechaInicioFormateada = fechas[0].format('YYYY-MM-DD 00:00');
+					fechaFinFormateada = fechas[1].format('YYYY-MM-DD HH:mm');
+					validartablaporcentaje(fechaInicioFormateada, fechaFinFormateada, rango);
+				});
+
 			});
 
 			function obtenerllenarciculos(fechaIniciodefa, fechaFindefa) {
@@ -988,9 +570,9 @@
 							radius: 45,
 							value: countJornada1,
 							maxValue: conteogeneral,
-							width: 7,
+							width: 8,
 							text: countJornada1,
-							colors: ['#f1f1f1', '#2BB930'],
+							colors: ['#f1f1f1', '#1d7af3'],
 							duration: 400,
 							wrpClass: 'circles-wrp',
 							textClass: 'circles-text',
@@ -1004,9 +586,9 @@
 							radius: 45,
 							value: countJornada2,
 							maxValue: conteogeneral,
-							width: 7,
+							width: 8,
 							text: countJornada2,
-							colors: ['#f1f1f1', '#f1c605'],
+							colors: ['#f1f1f1', '#fdaf4b'],
 							duration: 400,
 							wrpClass: 'circles-wrp',
 							textClass: 'circles-text',
@@ -1019,7 +601,7 @@
 							radius: 45,
 							value: countJornada3,
 							maxValue: conteogeneral,
-							width: 7,
+							width: 8,
 							text: countJornada3, // Modificar a 1 para que el texto se muestre siempre
 							colors: ['#f1f1f1', '#F25961'],
 							duration: 400,
@@ -1043,51 +625,360 @@
 			}
 		</script>
 		<script>
-			var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
+			multipleBarChart = document.getElementById('multipleBarChart').getContext('2d');
 
-			var mytotalIncomeChart = new Chart(totalIncomeChart, {
-				type: 'bar',
-				data: {
-					labels: ["L", "Ma", "Mi", "J", "V", "S", "D"],
-					datasets: [{
-						label: "Total Income",
-						backgroundColor: '#ff9e27',
-						borderColor: 'rgb(23, 125, 255)',
-						data: [6, 4, 9, 5, 4, 6, 40],
-					}],
-				},
-				options: {
-					responsive: true,
-					maintainAspectRatio: false,
-					legend: {
-						display: false,
-					},
-					scales: {
-						yAxes: [{
-							ticks: {
-								display: false //this will remove only the label
+			function validarporcentajeingreso(fechaIniciodefa, fechaFindefa) {
+
+				pieChart = document.getElementById('pieChart').getContext('2d');
+				var url = "<?= base_url('listadojornada'); ?>";
+				var params = {
+					fecha_inicio: fechaIniciodefa,
+					fecha_fin: fechaFindefa
+				};
+				console.log(url);
+				console.log(params);
+				$.ajax({
+					url: url,
+					method: 'POST', // Cambia el método a POST
+					dataType: 'json',
+					data: params, // Incluye los parámetros aquí
+					success: function(data) {
+						var conteogeneral = 0;
+						var countJornada1 = 0;
+						var countJornada2 = 0;
+						var countJornada3 = 0;
+
+						if (data.success === false) {
+							// Si success es false, establecer todas las variables a 0
+							conteogeneral = 0;
+							countJornada1 = 0;
+							countJornada2 = 0;
+							countJornada3 = 0;
+						} else {
+							// Iterar sobre los datos y realizar el conteo
+							var detalles = data.datos; // Asumiendo que 'datos' es la propiedad correcta, ajusta según tu estructura
+							console.log(detalles);
+
+							detalles.forEach(function(item) {
+								conteogeneral++;
+								switch (item.idestadoCumplimientoJornada) {
+									case '1':
+										countJornada1++;
+										break;
+									case '2':
+										countJornada2++;
+										break;
+									case '4':
+										countJornada3++;
+										break;
+										// Puedes agregar más casos según sea necesario
+								}
+							});
+						}
+						var myPieChart = new Chart(pieChart, {
+							type: 'pie',
+							data: {
+								datasets: [{
+									data: [countJornada1, countJornada2, countJornada3],
+									backgroundColor: ["#1d7af3", "#fdaf4b", "#f3545d"],
+									borderWidth: 0
+								}],
+								labels: ['JornadaCompleta', 'Tardanzas', 'Faltas']
 							},
-							gridLines: {
-								drawBorder: false,
-								display: false
+							options: {
+								responsive: true,
+								maintainAspectRatio: false,
+								legend: {
+									position: 'left',
+									labels: {
+										fontColor: 'rgb(154, 154, 154)',
+										fontSize: 11,
+										usePointStyle: true,
+										padding: 19
+									}
+								},
+								pieceLabel: {
+									render: 'percentage',
+									fontColor: 'white',
+									fontSize: 9,
+								},
+								layout: {
+									padding: {
+										left: 10,
+										right: 10,
+										top: 20,
+										bottom: 0
+									}
+								}
 							}
-						}],
-						xAxes: [{
-							gridLines: {
-								drawBorder: false,
-								display: false
-							}
-						}]
-					},
-				}
-			});
+						})
 
-			$('#lineChart').sparkline([105, 103, 123, 100, 95, 105, 115], {
-				type: 'line',
-				height: '70',
-				width: '100%',
-				lineWidth: '2',
-				lineColor: '#ffa534',
-				fillColor: 'rgba(255, 165, 52, .14)'
-			});
+					},
+					error: function(xhr, status, error) {
+						// Manejar errores
+						console.log(error);
+					}
+				});
+			}
+
+
+
+			function validartablaporcentaje(fechaIniciodefa, fechaFindefa, rango) {
+				var url = "<?= base_url('listadojornada'); ?>";
+				var params = {
+					fecha_inicio: fechaIniciodefa,
+					fecha_fin: fechaFindefa
+				};
+				console.log(url);
+				console.log(params);
+				$.ajax({
+					url: url,
+					method: 'POST', // Cambia el método a POST
+					dataType: 'json',
+					data: params, // Incluye los parámetros aquí
+					success: function(data) {
+						console.log(data);
+						var detalles = data.datos; // Asumiendo que 'datos' es la propiedad correcta, ajusta según tu estructura
+						console.log(detalles);
+
+						var cumplidosresumen;
+						var tardanzaresumen;
+						var faltasresumen;
+						var detallestabla;
+
+						if (rango == "anual") {
+							const year = new Date().getFullYear();
+							const monthlyCounts = {
+								cumplido: Array.from({
+									length: 12
+								}, () => 0),
+								tardanza: Array.from({
+									length: 12
+								}, () => 0),
+								falta: Array.from({
+									length: 12
+								}, () => 0)
+							};
+
+							// Iterar sobre los datos
+							detalles.forEach(function(item) {
+								const date = new Date(item.fechatrabajo);
+
+								// Verificar si el año es el actual
+								if (date.getFullYear() === year) {
+									// Obtener el mes en formato MM
+									const monthIndex = date.getMonth();
+
+									// Incrementar el recuento para esa categoría y mes específicos
+									switch (item.idestadoCumplimientoJornada) {
+										case '1':
+											monthlyCounts.cumplido[monthIndex] += 1;
+											break;
+										case '2':
+											monthlyCounts.tardanza[monthIndex] += 1;
+											break;
+										case '4':
+											monthlyCounts.falta[monthIndex] += 1;
+											break;
+											// Agregar más casos según sea necesario
+									}
+								}
+							});
+
+							// Imprimir el resultado
+							console.log('Cumplido:', monthlyCounts.cumplido);
+							console.log('Tardanza:', monthlyCounts.tardanza);
+							console.log('Falta:', monthlyCounts.falta);
+
+							cumplidosresumen = monthlyCounts.cumplido.slice(0, 11);
+							tardanzaresumen = monthlyCounts.tardanza.slice(0, 11);
+							faltasresumen = monthlyCounts.falta.slice(0, 11);
+							const anioactual = new Date().getFullYear();
+							detallestabla = ["Ene " + anioactual, "Feb " + anioactual, "Mar " + anioactual, "Abr " + anioactual, "May " + anioactual, "Jun " + anioactual, "Jul " + anioactual, "Ago " + anioactual, "Sep " + anioactual, "Oct " + anioactual, "Nov " + anioactual, "Dic " + anioactual];
+
+						} else if (rango == "mensual") {
+							const today = new Date();
+							const currentMonth = today.getMonth();
+							const currentYear = today.getFullYear();
+
+							// Obtener el primer día del mes actual
+							const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
+
+							// Obtener el último día del mes actual
+							const lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0);
+
+							// Crear arrays para almacenar los recuentos semanales
+							const weeklyCounts = {
+								cumplido: Array.from({
+									length: 4
+								}, () => 0),
+								tardanza: Array.from({
+									length: 4
+								}, () => 0),
+								falta: Array.from({
+									length: 4
+								}, () => 0)
+							};
+
+							// Iterar sobre los datos
+							detalles.forEach(function(item) {
+								const date = new Date(item.fechatrabajo);
+
+								// Verificar si la fecha está dentro del mes actual
+								if (date >= firstDayOfMonth && date <= lastDayOfMonth) {
+									// Calcular el número de semana
+									const weekIndex = Math.floor((date.getDate() - firstDayOfMonth.getDate()) / 7);
+
+									// Asegurarse de que el índice de semana esté dentro del rango
+									if (weekIndex >= 0 && weekIndex < 4) {
+										// Incrementar el recuento para esa semana y categoría específicos
+										switch (item.idestadoCumplimientoJornada) {
+											case '1':
+												weeklyCounts.cumplido[weekIndex] += 1;
+												break;
+											case '2':
+												weeklyCounts.tardanza[weekIndex] += 1;
+												break;
+											case '4':
+												weeklyCounts.falta[weekIndex] += 1;
+												break;
+												// Agregar más casos según sea necesario
+										}
+									}
+								}
+							});
+
+							// Imprimir el resultado
+							console.log('Cumplido semanal para el mes actual:', weeklyCounts.cumplido);
+							console.log('Tardanza semanal para el mes actual:', weeklyCounts.tardanza);
+							console.log('Falta semanal para el mes actual:', weeklyCounts.falta);
+							cumplidosresumen = weeklyCounts.cumplido.slice(0, 3);
+							tardanzaresumen = weeklyCounts.tardanza.slice(0, 3);
+							faltasresumen = weeklyCounts.falta.slice(0, 3);
+							const monthNames = [
+								'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+								'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+							];
+							const mesanioactual = monthNames[currentMonth] + ' ' + currentYear;
+
+							detallestabla = ["Sem 1 " + mesanioactual, "Sem 2 " + mesanioactual, "Sem 3 " + mesanioactual, "Sem 4 " + mesanioactual];
+
+						} else if (rango == "semanal") {
+							const today = new Date();
+							const currentDayOfWeek = today.getDay(); // 0 para domingo, 1 para lunes, ..., 6 para sábado
+
+							// Obtener el primer día de la semana actual (lunes)
+							const firstDayOfWeek = moment(today).startOf('isoWeek');
+
+							// Obtener el último día de la semana actual (domingo)
+							const lastDayOfWeek = moment(firstDayOfWeek).endOf('isoWeek');
+
+							// Crear arrays para almacenar los recuentos diarios y las fechas
+							const dailyCounts = {
+								cumplido: Array.from({
+									length: 7
+								}, () => 0),
+								tardanza: Array.from({
+									length: 7
+								}, () => 0),
+								falta: Array.from({
+									length: 7
+								}, () => 0)
+							};
+
+							const dailyDates = Array.from({
+								length: 7
+							}, (_, i) => {
+								const date = moment(firstDayOfWeek).add(i, 'days');
+								return date.format('DD/MM/YYYY');
+							});
+
+							// Iterar sobre los datos
+							detalles.forEach(function(item) {
+								const date = moment(item.fechatrabajo);
+
+								// Verificar si la fecha está dentro de la semana actual
+								if (date.isBetween(firstDayOfWeek, lastDayOfWeek, null, '[]')) {
+									// Calcular el índice del día
+									const dayIndex = date.day(); // 0 para domingo, 1 para lunes, ..., 6 para sábado
+
+									// Incrementar el recuento para ese día y categoría específicos
+									switch (item.idestadoCumplimientoJornada) {
+										case '1':
+											dailyCounts.cumplido[dayIndex] += 1;
+											break;
+										case '2':
+											dailyCounts.tardanza[dayIndex] += 1;
+											break;
+										case '4':
+											dailyCounts.falta[dayIndex] += 1;
+											break;
+											// Agregar más casos según sea necesario
+									}
+								}
+							});
+
+							// Imprimir el resultado
+							console.log('Cumplido diario para la semana actual:', dailyCounts.cumplido);
+							console.log('Tardanza diaria para la semana actual:', dailyCounts.tardanza);
+							console.log('Falta diaria para la semana actual:', dailyCounts.falta);
+							cumplidosresumen = dailyCounts.cumplido.slice(0, 6);
+							tardanzaresumen = dailyCounts.tardanza.slice(0, 6);
+							faltasresumen = dailyCounts.falta.slice(0, 6);
+							detallestabla = ["Lu " + dailyDates[0], "Ma " + dailyDates[1], "Mi " + dailyDates[2], "Ju " + dailyDates[3], "Vi " + dailyDates[4], "Sab " + dailyDates[5], "Dom " + dailyDates[6]];
+							console.log('Detalle de la tabla:', detallestabla);
+						}
+
+
+						var myMultipleBarChart = new Chart(multipleBarChart, {
+							type: 'bar',
+							data: {
+								labels: detallestabla,
+								datasets: [{
+									label: "Jornada Completa",
+									backgroundColor: '#177dff',
+									borderColor: ' #177dff',
+									data: cumplidosresumen,
+								}, {
+									label: "Tardanza",
+									backgroundColor: '#fdaf4b',
+									borderColor: '#fdaf4b',
+									data: tardanzaresumen,
+								}, {
+									label: "Falta",
+									backgroundColor: '#f3545d',
+									borderColor: '#f3545d',
+									data: faltasresumen,
+								}],
+							},
+							options: {
+								responsive: true,
+								maintainAspectRatio: false,
+								legend: {
+									position: 'bottom'
+								},
+								tooltips: {
+									mode: 'index',
+									intersect: false
+								},
+								responsive: true,
+								scales: {
+									xAxes: [{
+										stacked: true,
+									}],
+									yAxes: [{
+										stacked: true
+									}]
+								}
+							}
+						});
+						console.log('Falta semanal para el mes actual:', detallestabla);
+					},
+					error: function(xhr, status, error) {
+						// Manejar errores
+						console.log(error);
+					}
+				});
+
+			}
 		</script>

@@ -51,7 +51,7 @@
                         </div>
                         <div class="card-body">
                             <div class="chart-container">
-                                <canvas id="pieChart" style="width: 50%; height: 50%"></canvas>
+                                <canvas id="pieChart" style="width: 20%; height: 20%"></canvas>
                             </div>
                         </div>
                     </div>

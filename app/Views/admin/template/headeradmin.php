@@ -42,6 +42,13 @@
 
 <!-- Moment JS -->
 <script src="<?= base_url('/public/admin/assets/js/plugin/moment/moment.min.js'); ?>"></script>
+
+<!--<script src="<?= base_url('/public/admin/assets/js/plugin/datatables/datatables.min.js'); ?>"></script>-->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+  
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+
+
 </head>
 <body>
 	<div class="wrapper">
