@@ -142,8 +142,7 @@
 								<!-- Modal -->
 
 								<div class="table-responsive">
-									<table id="idtablausuario" class="display table table-striped table-hover">
-
+									<table id="add-row" class="display table table-striped table-hover">
 										<thead>
 											<tr>
 
@@ -164,8 +163,60 @@
 											</tr>
 										</tfoot>
 										<tbody>
+											<tr>
 
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
 
+												<td>System Architect</td>
+												<td>Edinburgh</td>
+												<td>
+													<div class="form-button-action">
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Ver Detalle">
+															<i class="fa fa-edit"></i>
+														</button>
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+															<i class="fa fa-edit"></i>
+														</button>
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+															<i class="fa fa-times"></i>
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
+
+												<td>Accountant</td>
+												<td>Tokyo</td>
+												<td>
+													<div class="form-button-action">
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+															<i class="fa fa-edit"></i>
+														</button>
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+															<i class="fa fa-times"></i>
+														</button>
+													</div>
+												</td>
+											</tr>
 											<tr>
 												<td>
 													<div style="display: flex; align-items: center;">
@@ -216,10 +267,131 @@
 													</div>
 												</td>
 											</tr>
+											<tr>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
 
+												<td>Accountant</td>
+												<td>Tokyo</td>
+												<td>
+													<div class="form-button-action">
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+															<i class="fa fa-edit"></i>
+														</button>
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+															<i class="fa fa-times"></i>
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
 
+												<td>Integration Specialist</td>
+												<td>New York</td>
+												<td>
+													<div class="form-button-action">
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+															<i class="fa fa-edit"></i>
+														</button>
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+															<i class="fa fa-times"></i>
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
 
+												<td>Sales Assistant</td>
+												<td>San Francisco</td>
+												<td>
+													<div class="form-button-action">
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+															<i class="fa fa-edit"></i>
+														</button>
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+															<i class="fa fa-times"></i>
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
 
+												<td>Integration Specialist</td>
+												<td>Tokyo</td>
+												<td>
+													<div class="form-button-action">
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+															<i class="fa fa-edit"></i>
+														</button>
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+															<i class="fa fa-times"></i>
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div style="display: flex; align-items: center;">
+														<div class="avatar" style="margin-right: 10px;">
+															<img src="<?= base_url('/public/admin/assets/img/jm_denis.jpg'); ?>" alt="..." class="avatar-img rounded-circle">
+														</div>
+														<div>
+															<p style="margin: 0;">Software Engineer</p>
+														</div>
+													</div>
+												</td>
+
+												<td>Javascript Developer</td>
+												<td>San Francisco</td>
+												<td>
+													<div class="form-button-action">
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+															<i class="fa fa-edit"></i>
+														</button>
+														<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+															<i class="fa fa-times"></i>
+														</button>
+													</div>
+												</td>
+											</tr>
 											<tr>
 												<td>
 													<div style="display: flex; align-items: center;">
@@ -386,21 +558,19 @@
 			$(document).ready(function() {
 
 
-			
-				new DataTable('#idtablausuario', {
-					columnDefs: [{
-							targets: [0],
-							orderData: [0, 1]
-						},
-						{
-							targets: [1],
-							orderData: [1, 0]
-						},
-						{
-							targets: [4],
-							orderData: [4, 0]
-						}
-					]
+				// Add Row
+				$('#add-row').DataTable({
+					"pageLength": 5,
+				});
+
+				$('#addRowButton').click(function() {
+					$('#add-row').dataTable().fnAddData([
+						$("#addName").val(),
+						$("#addPosition").val(),
+						$("#addOffice").val(),
+						action
+					]);
+
 				});
 			});
 		</script>
